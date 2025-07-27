@@ -1,6 +1,7 @@
 # Courbet ROMs Hub
 
-![Courbet ROMs Hub Banner](https://placehold.co/1200x600.png?text=Courbet+ROMs+Hub)
+![Courbet ROMs Hub Banner](https://github.com/user-attachments/assets/b2859d82-5056-4ed0-bc55-a0ceea2c053bb)
+
 
 A centralized and beautifully designed hub for custom ROMs, guides, and resources for the **Xiaomi Mi 11 Lite 4G (codenamed "courbet")**. This project aims to provide a clean, user-friendly, and reliable source of information for the device's enthusiast community.
 
