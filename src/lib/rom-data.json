@@ -208,6 +208,14 @@
       "version": "7.0",
       "date": "2025-04-17",
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/RisingOS/17%20April%202025/RisingOS_Revived-7.0-250417-1742-CORE-COMMUNITY-courbet.zip?viasf=1"
+    },
+    {
+      "file_name": "RisingOS_Revived-8.0-250731-0607-CORE-COMMUNITY-courbet.zip",
+      "rom_type": "RisingOS Revived",
+      "android_version": "16",
+      "version": "8.0",
+      "date": "2025-07-31",
+      "download_url": "https://phoenixnap.dl.sourceforge.net/project/courbet-roms/A16/RisingOS/31%20July%202025/RisingOS_Revived-8.0-250731-0607-CORE-COMMUNITY-courbet.zip?viasf=1"
     }
   ]
 }

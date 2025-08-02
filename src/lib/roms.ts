@@ -44,6 +44,7 @@ const romDescriptions: Record<string, string> = {
   'The Pixel Project': 'Aims to replicate the Google Pixel software experience as closely as possible on other devices.',
   'VoltageOS': 'VoltageOS is a clean and simple ROM that focuses on providing a stable and reliable Android experience.',
   'crDroid': 'crDroid is designed to increase performance and reliability over stock Android for your device, also attempting to bring many of the best features existent today.',
+  'RisingOS Revived': 'RisingOS Revived continues the legacy of RisingOS with a focus on stability and a refined user experience.',
 };
 
 const imageHints: Record<string, string> = {
@@ -54,6 +55,7 @@ const imageHints: Record<string, string> = {
     'lineageos': 'abstract green',
     'pixelos': 'abstract dark blue',
     'risingos': 'abstract red',
+    'risingos-revived': 'abstract red',
     'the-pixel-project': 'abstract yellow',
     'voltageos': 'abstract indigo',
     'crdroid': 'abstract orange geometric',
@@ -67,6 +69,7 @@ const bannerFileNames: Record<string, string> = {
   'LineageOS': 'Lineage.jpg',
   'PixelOS': 'pixelos.jpg',
   'RisingOS': 'RisingOS.jpg',
+  'RisingOS Revived': 'RisingOS_Revived.jpg',
   'The Pixel Project': 'ThePixelProject.png',
   'VoltageOS': 'voltage.png',
   'crDroid': 'CrDroid.jpg',
@@ -87,7 +90,7 @@ const getRisingOsDate = (filename: string): string => {
 };
 
 romData.roms.forEach(rom => {
-  if (rom.rom_type === 'RisingOS') {
+  if (rom.rom_type === 'RisingOS' || rom.rom_type === 'RisingOS Revived') {
     rom.date = getRisingOsDate(rom.file_name);
   }
 });
@@ -154,6 +157,13 @@ for (const romName in romsByType) {
       // For AxionOS Android 16, the first build is Beta. Otherwise, first is beta, rest stable.
       status: (romName === 'AxionOS' && build.android_version === '16' && build.version === '2.0') ? 'Beta' : (index === 0 ? 'Beta' : 'Stable')
     }));
+    
+    // Explicitly set Beta for RisingOS Revived v8.0
+    const risingRevivedV8 = buildsWithStatus.find(b => b.rom_type === 'RisingOS Revived' && b.version === '8.0');
+    if(risingRevivedV8) {
+        risingRevivedV8.status = 'Beta';
+    }
+
 
     // Re-sort newest to oldest for display
     buildsWithStatus.sort((a, b) => {
@@ -167,6 +177,9 @@ for (const romName in romsByType) {
     const previousBuilds = buildsWithStatus.slice(1);
 
     const getWhatsNew = (romName: string, build: any): string[] => {
+      if (romName === 'RisingOS Revived' && build.version === '8.0') {
+        return ['Initial release of RisingOS Revived v8.0 Rom'];
+      }
       if (romName === 'AxionOS' && build.version === '2.0') {
           return ['Initial release of AxionOS v2.0'];
       }
