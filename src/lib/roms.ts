@@ -2,6 +2,17 @@
 
 import romData from './rom-data.json';
 
+interface RomBuild {
+  file_name: string;
+  rom_type: string;
+  android_version: string;
+  version: string;
+  date: string;
+  download_url: string;
+  status: 'Stable' | 'Beta';
+  whats_new: string[];
+}
+
 export interface PreviousRelease {
   version: string;
   date: string;
@@ -89,7 +100,7 @@ const getRisingOsDate = (filename: string): string => {
   return 'Unknown';
 };
 
-romData.roms.forEach(rom => {
+(romData.roms as RomBuild[]).forEach(rom => {
   if (rom.rom_type === 'RisingOS' || rom.rom_type === 'RisingOS Revived') {
     rom.date = getRisingOsDate(rom.file_name);
   }
@@ -97,13 +108,13 @@ romData.roms.forEach(rom => {
 
 
 // Group by rom_type
-const romsByType = romData.roms.reduce((acc, rom) => {
+const romsByType = (romData.roms as RomBuild[]).reduce((acc, rom) => {
   if (!acc[rom.rom_type]) {
     acc[rom.rom_type] = [];
   }
   acc[rom.rom_type].push(rom);
   return acc;
-}, {} as Record<string, typeof romData.roms>);
+}, {} as Record<string, RomBuild[]>);
 
 const cutoffDate = new Date('2025-02-10');
 const getRootMethod = (buildDate: string): 'KernelSU' | 'KernelSU Next' => {
@@ -138,225 +149,28 @@ for (const romName in romsByType) {
     }
     acc[androidVersionNumber].push(build);
     return acc;
-  }, {} as Record<string, typeof romData.roms>);
+  }, {} as Record<string, RomBuild[]>);
 
 
   for (const androidVersion in buildsByAndroidVersion) {
     const versionBuilds = buildsByAndroidVersion[androidVersion];
     
-    // Sort oldest to newest to determine Beta/Stable status correctly
+    // Sort newest to oldest for display
     versionBuilds.sort((a, b) => {
-      if (a.date === 'Unknown' && b.date === 'Unknown') return 0;
-      if (a.date === 'Unknown') return -1;
-      if (b.date === 'Unknown') return 1;
-      return new Date(a.date).getTime() - new Date(b.date).getTime();
-    });
-
-    const buildsWithStatus = versionBuilds.map((build, index) => ({
-      ...build,
-      // For AxionOS Android 16, the first build is Beta. Otherwise, first is beta, rest stable.
-      status: (romName === 'AxionOS' && build.android_version === '16' && build.version === '2.0') ? 'Beta' : (index === 0 ? 'Beta' : 'Stable')
-    }));
-    
-    // Explicitly set Beta for RisingOS Revived v8.0
-    const risingRevivedV8 = buildsWithStatus.find(b => b.rom_type === 'RisingOS Revived' && b.version === '8.0');
-    if(risingRevivedV8) {
-        risingRevivedV8.status = 'Beta';
-    }
-
-
-    // Re-sort newest to oldest for display
-    buildsWithStatus.sort((a, b) => {
       if (a.date === 'Unknown' && b.date === 'Unknown') return 0;
       if (a.date === 'Unknown') return 1;
       if (b.date === 'Unknown') return -1;
       return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
 
-    const latestBuild = buildsWithStatus[0];
-    const previousBuilds = buildsWithStatus.slice(1);
-
-    const getWhatsNew = (romName: string, build: any): string[] => {
-      if (romName === 'RisingOS Revived' && build.version === '8.0') {
-        return ['Initial release of RisingOS Revived v8.0 Rom'];
-      }
-      if (romName === 'AxionOS' && build.version === '2.0') {
-          return ['Initial release of AxionOS v2.0'];
-      }
-      if (romName === 'EvolutionX' && build.date === '2025-07-09') {
-        return [
-          'July security patches',
-          'Overall improvements',
-          'Tons of rom features has been reintegrated'
-        ];
-      }
-       if (romName === 'AlphaDroid' && build.date === '2025-06-08') {
-        return [
-          'June security patches',
-          'Fixed vibrator intensity setting',
-          'zram improvements'
-        ];
-      }
-       if (romName === 'AxionOS' && build.date === '2025-06-08') {
-        return [
-          'June security patches',
-          'Fixed vibration intensity setting',
-          'Zram improvements',
-          'For more info about rom changes see axion changelog repo'
-        ];
-      }
-      if (romName === 'LineageOS' && build.date === '2025-06-07') {
-        return ['June security patches'];
-      }
-      if (romName === 'Infinity-X') {
-        return [`Initial release of Infinity-X v3.0`];
-      }
-      if (romName === 'VoltageOS') {
-        return [`Initial release of ${romName} v5.0`];
-      }
-       if (romName === 'RisingOS' && build.date === '2025-06-14') {
-        return [
-          'June security patches',
-          'Tons of sepolicy denials fixes',
-          'For more detailed rom changelog, see RisingOS changelog repo'
-        ];
-      }
-      if (romName === 'PixelOS' && build.date === '2025-05-08') {
-          return ['June security patches'];
-      }
-       if (romName === 'The Pixel Project' && build.date === '2025-05-10') {
-          return ['May security patches'];
-      }
-       if (romName === 'crDroid') {
-          return [
-              'crDroid version 11.7',
-              'Please visit the official crDroid changelog for detailed updates.',
-            ];
-      }
-      let versionString = `v${build.version}`;
-      if (romName === 'EvolutionX') {
-        if (build.android_version === '16') {
-          versionString = 'v11.0';
-        } else if (build.android_version === '15') {
-          versionString = 'v10.x';
-        }
-      }
-      return [
-        `Initial release of ${romName} ${versionString}`,
-        'General stability and performance improvements.',
-        'Latest security patches included.',
-      ];
-    };
-    
-    const getPreviousWhatsNew = (romName: string, build: any): string[] => {
-        if (romName === 'EvolutionX' && build.date === '2025-06-25') {
-          return ['Initial release of Evolution-X v11.0'];
-        }
-        if (romName === 'RisingOS' && build.date === '2025-05-08') {
-          return [
-            'May security patches',
-            'For more detailed rom changelog, see RisingOS changelog repo',
-          ];
-        }
-        if (romName === 'RisingOS' && build.date === '2025-04-24') {
-            return ['Synced with latest RisingOS sources alongside officially stable public release announcement'];
-        }
-        if (romName === 'RisingOS' && build.date === '2025-04-17') {
-          return [
-            'Partially fixed Lift to Wake (works but needs improvements)',
-            'Migrate to QTI USB Gadget AIDL Hal',
-            'Enable USB and skin temperature warnings',
-            'Implemented DeviceAsWebcam service',
-            'Audio improvements',
-            'Support WiFi6',
-            'Increased non-rapid charge current to 2A (2000mA)',
-            'Some other minor fixes and improvements'
-          ];
-        }
-        if (romName === 'AlphaDroid' && build.date === '2025-05-16') {
-          return ['May security patches'];
-        }
-        if (romName === 'AlphaDroid' && build.date === '2025-04-27') {
-            return [
-              'Partially fixed Lift to Wake (works but needs improvements)',
-              'Migrate to QTI USB Gadget AIDL Hal',
-              'Enable USB and skin temperature warnings',
-              'Implemented DeviceAsWebcam service',
-              'Audio improvements',
-              'Support WiFi6',
-              'Increased non-rapid charge current to 2A (2000mA)',
-              'Some other minor fixes and improvements'
-            ];
-          }
-        if (romName === 'AxionOS' && build.date === '2025-05-08') {
-            return [
-                'May security patches',
-                'For more info about changes see axion changelog repo'
-            ];
-        }
-        if (romName === 'AxionOS' && build.date === '2025-04-19') {
-            return ['Initial release of AxionOS v1.3'];
-        }
-        if (romName === 'LineageOS' && build.date === '2025-05-09') {
-          return ['May security patches'];
-        }
-        if (romName === 'LineageOS' && build.date === '2025-04-12') {
-          return [
-            'April security patches',
-            'Removed miuicamera due to qpr2 changes for the moment',
-            'Migrate to QTI USB Gadget AIDL HAL',
-            'Implemented DeviceAsWebcam service',
-            'Audio improvements',
-            'Support WiFi6',
-            'Increased non-rapid charge current to 2A (2000mA)',
-            'Some other minor fixes and improvements',
-          ];
-        }
-        if (romName === 'PixelOS' && build.date === '2025-04-11') {
-            return [
-                'April security patches',
-                'Partially fixed Lift to Wake (works but needs improvements)',
-                'Migrate to QTI USB Gadget AIDL HAL',
-                'Enable USB and skin temperature warnings',
-                'Implemented DeviceAsWebcam service',
-                'Audio improvements',
-                'Support WiFi6',
-                'Increased non-rapid charge current to 2A (2000mA)',
-                'Some other minor fixes and improvements',
-            ];
-        }
-        if (romName === 'The Pixel Project' && build.date === '2025-04-18') {
-            return [
-              'April security patches',
-              'Partially fixed Lift to Wake (works but needs improvements)',
-              'Migrate to QTI USB Gadget AIDL HAL',
-              'Implemented DeviceAsWebcam service',
-              'Audio improvements',
-              'Support WiFi6',
-              'Increased non-rapid charge current to 2A (2000mA)',
-              'Some other minor fixes and improvements',
-            ];
-        }
-
-        let versionString = `v${build.version}`;
-        if (romName === 'EvolutionX') {
-            if (build.android_version === '16') {
-                versionString = 'v11.0';
-            } else if (build.android_version === '15') {
-                versionString = 'v10.x';
-            }
-        }
-        return [
-            `Update to version ${versionString}`,
-            'Minor bugfixes and improvements.',
-        ];
-    };
+    const latestBuild = versionBuilds[0];
+    const previousBuilds = versionBuilds.slice(1);
 
     const romVersion: RomVersion = {
       androidVersion: androidVersion,
       status: latestBuild.status,
       downloadLink: latestBuild.download_url,
-      whatsNew: getWhatsNew(romName, latestBuild),
+      whatsNew: latestBuild.whats_new,
       lastUpdated: latestBuild.date === 'Unknown' ? 'N/A' : latestBuild.date,
       rootMethod: getRootMethod(latestBuild.date),
       previousReleases: previousBuilds.map(pr => ({
@@ -365,7 +179,7 @@ for (const romName in romsByType) {
         downloadLink: pr.download_url,
         rootMethod: getRootMethod(pr.date),
         status: pr.status,
-        whatsNew: getPreviousWhatsNew(romName, pr),
+        whatsNew: pr.whats_new,
       })),
     };
     

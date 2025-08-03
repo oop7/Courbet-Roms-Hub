@@ -7,8 +7,11 @@ import { cn } from '@/lib/utils';
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
-  title: 'Courbet ROMs Hub',
-  description: 'The ultimate destination for custom ROMs for your Mi 11 Lite 4G (courbet).',
+  title: {
+    default: 'Courbet ROMs Hub',
+    template: '%s | Courbet ROMs Hub',
+  },
+  description: 'The ultimate destination for custom ROMs, guides, and resources for the Xiaomi Mi 11 Lite 4G (courbet). Find the best and most stable ROMs all in one place.',
 };
 
 export default function RootLayout({
@@ -23,7 +26,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
       </head>
-      <body className={cn('font-body antialiased min-h-screen flex flex-col')}>
+      <body className={cn('font-body antialiased min-h-screen flex flex-col')} suppressHydrationWarning>
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

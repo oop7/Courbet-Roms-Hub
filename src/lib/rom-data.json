@@ -7,6 +7,8 @@
       "android_version": "16",
       "version": "2.0",
       "date": "2025-07-26",
+      "status": "Beta",
+      "whats_new": ["Initial release of AxionOS v2.0"],
       "download_url": "https://netix.dl.sourceforge.net/project/courbet-roms/A16/AxionOS/26%20July%202025/axion-2.0-BETA-20250726-COMMUNITY-GMS-courbet.zip?viasf=1"
     },
     {
@@ -15,6 +17,8 @@
       "android_version": "16",
       "version": "3.0",
       "date": "2025-07-22",
+      "status": "Beta",
+      "whats_new": ["Initial release of Infinity-X v3.0"],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A16/Infinity-X/22%20July%202025/Project_Infinity-X-3.0-courbet-20250722-1054-GAPPS-UNOFFICIAL.zip?viasf=1"
     },
     {
@@ -23,6 +27,8 @@
       "android_version": "16",
       "version": "5.0",
       "date": "2025-07-20",
+      "status": "Beta",
+      "whats_new": ["Initial release of VoltageOS v5.0"],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A16/VoltageOS/20%20July%202025/voltage-5.0-courbet-20250720-1927-UNOFFICIAL.zip?viasf=1"
     },
     {
@@ -31,6 +37,12 @@
       "android_version": "16",
       "version": "16.0",
       "date": "2025-07-09",
+      "status": "Stable",
+      "whats_new": [
+        "July security patches",
+        "Overall improvements",
+        "Tons of rom features has been reintegrated"
+      ],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A16/Evolution-X/09%20July%202025/EvolutionX-16.0-20250709-courbet-11.0-Unofficial.zip?viasf=1"
     },
     {
@@ -39,6 +51,8 @@
       "android_version": "16",
       "version": "16.0",
       "date": "2025-06-25",
+      "status": "Beta",
+      "whats_new": ["Initial release of Evolution-X v11.0"],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A16/Evolution-X/25%20June%202025/EvolutionX-16.0-20250625-courbet-11.0-Unofficial.zip?viasf=1"
     },
     {
@@ -47,6 +61,12 @@
       "android_version": "15",
       "version": "3.2.1",
       "date": "2025-06-08",
+      "status": "Stable",
+      "whats_new": [
+        "June security patches",
+        "Fixed vibrator intensity setting",
+        "zram improvements"
+      ],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/AlphaDroid/08%20June%202025/AlphaDroid-15-20250608-gapps-courbet-v3.2.1.zip?viasf=1"
     },
     {
@@ -55,6 +75,13 @@
       "android_version": "15",
       "version": "1.5",
       "date": "2025-06-08",
+      "status": "Stable",
+      "whats_new": [
+        "June security patches",
+        "Fixed vibration intensity setting",
+        "Zram improvements",
+        "For more info about rom changes see axion changelog repo"
+      ],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/AxionOS/08%20June%202025/axion-1.5-NIGHTLY-20250608-COMMUNITY-GMS-courbet.zip?viasf=1"
     },
     {
@@ -63,6 +90,8 @@
       "android_version": "15",
       "version": "22.2",
       "date": "2025-06-07",
+      "status": "Stable",
+      "whats_new": ["June security patches"],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/LineageOS/07%20June%202025/lineage-22.2-20250607-UNOFFICIAL-courbet.zip?viasf=1"
     },
     {
@@ -71,6 +100,8 @@
       "android_version": "15",
       "version": "15.0",
       "date": "2025-06-04",
+      "status": "Stable",
+      "whats_new": ["Update to version v10.7", "Minor bugfixes and improvements."],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/EvolutionX/04%20June%202025/EvolutionX-15.0-20250604-courbet-10.7-Unofficial.zip?viasf=1"
     },
     {
@@ -79,6 +110,8 @@
       "android_version": "15",
       "version": "3.2",
       "date": "2025-05-16",
+      "status": "Stable",
+      "whats_new": ["May security patches"],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/AlphaDroid/16%20May%202025/AlphaDroid-15-20250516-gapps-courbet-v3.2.zip?viasf=1"
     },
     {
@@ -87,6 +120,8 @@
       "android_version": "15",
       "version": "2.2",
       "date": "2025-05-10",
+      "status": "Stable",
+      "whats_new": ["May security patches"],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/The%20Pixel%20Project/09%20May%202025/PixelProject_courbet-2.2-UNOFFICIAL-20250510-0922.zip?viasf=1"
     },
     {
@@ -95,6 +130,8 @@
       "android_version": "15",
       "version": "22.2",
       "date": "2025-05-09",
+      "status": "Stable",
+      "whats_new": ["May security patches"],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/LineageOS/09%20May%202025/lineage-22.2-20250509-UNOFFICIAL-courbet.zip?viasf=1"
     },
     {
@@ -103,6 +140,8 @@
       "android_version": "15",
       "version": "15.0",
       "date": "2025-05-08",
+      "status": "Stable",
+      "whats_new": ["June security patches"],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/PixelOS/08%20May%202025/PixelOS_courbet-15.0-20250508-2038.zip?viasf=1"
     },
     {
@@ -111,6 +150,11 @@
       "android_version": "15",
       "version": "1.4",
       "date": "2025-05-08",
+      "status": "Stable",
+      "whats_new": [
+        "May security patches",
+        "For more info about changes see axion changelog repo"
+      ],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/AxionOS/08%20May%202025/axion-1.4-NIGHTLY-20250508-COMMUNITY-GMS-courbet.zip?viasf=1"
     },
     {
@@ -119,6 +163,8 @@
       "android_version": "15",
       "version": "15.0",
       "date": "2025-05-07",
+      "status": "Stable",
+      "whats_new": ["Update to version v10.6", "Minor bugfixes and improvements."],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/EvolutionX/07%20May%202025/EvolutionX-15.0-20250507-courbet-10.6-Unofficial.zip?viasf=1"
     },
     {
@@ -127,6 +173,17 @@
       "android_version": "15",
       "version": "3.2",
       "date": "2025-04-27",
+      "status": "Beta",
+      "whats_new": [
+        "Partially fixed Lift to Wake (works but needs improvements)",
+        "Migrate to QTI USB Gadget AIDL Hal",
+        "Enable USB and skin temperature warnings",
+        "Implemented DeviceAsWebcam service",
+        "Audio improvements",
+        "Support WiFi6",
+        "Increased non-rapid charge current to 2A (2000mA)",
+        "Some other minor fixes and improvements"
+      ],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/AlphaDroid/27%20April%202025/AlphaDroid-15-20250427-gapps-courbet-v3.2.zip?viasf=1"
     },
     {
@@ -135,6 +192,8 @@
       "android_version": "15",
       "version": "15.0",
       "date": "2025-04-21",
+      "status": "Beta",
+      "whats_new": ["Initial release of EvolutionX v10.5", "General stability and performance improvements.", "Latest security patches included."],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/EvolutionX/21%20April%202025/EvolutionX-15.0-20250421-courbet-10.5-Unofficial.zip?viasf=1"
     },
     {
@@ -143,6 +202,8 @@
       "android_version": "15",
       "version": "1.3",
       "date": "2025-04-19",
+      "status": "Beta",
+      "whats_new": ["Initial release of AxionOS v1.3"],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/AxionOS/19%20April%202025/axion-1.3-NIGHTLY-20250419-COMMUNITY-GMS-courbet.zip?viasf=1"
     },
     {
@@ -151,6 +212,17 @@
       "android_version": "15",
       "version": "2.1",
       "date": "2025-04-18",
+      "status": "Beta",
+      "whats_new": [
+        "April security patches",
+        "Partially fixed Lift to Wake (works but needs improvements)",
+        "Migrate to QTI USB Gadget AIDL HAL",
+        "Implemented DeviceAsWebcam service",
+        "Audio improvements",
+        "Support WiFi6",
+        "Increased non-rapid charge current to 2A (2000mA)",
+        "Some other minor fixes and improvements"
+      ],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/The%20Pixel%20Project/18%20April%202025/PixelProject_courbet-2.1-UNOFFICIAL-20250418-1746.zip?viasf=1"
     },
     {
@@ -159,6 +231,17 @@
       "android_version": "15",
       "version": "22.2",
       "date": "2025-04-12",
+      "status": "Beta",
+      "whats_new": [
+        "April security patches",
+        "Removed miuicamera due to qpr2 changes for the moment",
+        "Migrate to QTI USB Gadget AIDL HAL",
+        "Implemented DeviceAsWebcam service",
+        "Audio improvements",
+        "Support WiFi6",
+        "Increased non-rapid charge current to 2A (2000mA)",
+        "Some other minor fixes and improvements"
+      ],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/LineageOS/12%20April%202025/lineage-22.2-20250412-UNOFFICIAL-courbet.zip?viasf=1"
     },
     {
@@ -167,6 +250,18 @@
       "android_version": "15",
       "version": "15.0",
       "date": "2025-04-11",
+      "status": "Beta",
+      "whats_new": [
+        "April security patches",
+        "Partially fixed Lift to Wake (works but needs improvements)",
+        "Migrate to QTI USB Gadget AIDL HAL",
+        "Enable USB and skin temperature warnings",
+        "Implemented DeviceAsWebcam service",
+        "Audio improvements",
+        "Support WiFi6",
+        "Increased non-rapid charge current to 2A (2000mA)",
+        "Some other minor fixes and improvements"
+      ],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/PixelOS/11%20April%202025/PixelOS_courbet-15.0-20250411-0905.zip?viasf=1"
     },
     {
@@ -175,6 +270,8 @@
       "android_version": "15",
       "version": "15.0",
       "date": "2025-04-11",
+      "status": "Stable",
+      "whats_new": ["Update to version v10.5", "Minor bugfixes and improvements."],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/EvolutionX/11%20April%202025/EvolutionX-15.0-20250411-courbet-10.5-Unofficial.zip?viasf=1"
     },
     {
@@ -183,6 +280,12 @@
       "android_version": "15",
       "version": "7.1",
       "date": "2025-06-14",
+      "status": "Stable",
+      "whats_new": [
+        "June security patches",
+        "Tons of sepolicy denials fixes",
+        "For more detailed rom changelog, see RisingOS changelog repo"
+      ],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/RisingOS/14%20June%202025/RisingOS_Revived-7.1-250614-1022-CORE-COMMUNITY-courbet.zip?viasf=1"
     },
     {
@@ -191,6 +294,11 @@
       "android_version": "15",
       "version": "7.0",
       "date": "2025-05-08",
+      "status": "Stable",
+      "whats_new": [
+        "May security patches",
+        "For more detailed rom changelog, see RisingOS changelog repo"
+      ],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/RisingOS/08%20May%202025/RisingOS_Revived-7.0-250508-0740-CORE-COMMUNITY-courbet.zip?viasf=1"
     },
     {
@@ -199,6 +307,8 @@
       "android_version": "15",
       "version": "7.0",
       "date": "2025-04-24",
+      "status": "Stable",
+      "whats_new": ["Synced with latest RisingOS sources alongside officially stable public release announcement"],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/RisingOS/24%20April%202025/RisingOS_Revived-7.0-250424-1859-CORE-COMMUNITY-courbet.zip?viasf=1"
     },
     {
@@ -207,6 +317,17 @@
       "android_version": "15",
       "version": "7.0",
       "date": "2025-04-17",
+      "status": "Beta",
+      "whats_new": [
+        "Partially fixed Lift to Wake (works but needs improvements)",
+        "Migrate to QTI USB Gadget AIDL Hal",
+        "Enable USB and skin temperature warnings",
+        "Implemented DeviceAsWebcam service",
+        "Audio improvements",
+        "Support WiFi6",
+        "Increased non-rapid charge current to 2A (2000mA)",
+        "Some other minor fixes and improvements"
+      ],
       "download_url": "https://cyfuture.dl.sourceforge.net/project/courbet-roms/A15/RisingOS/17%20April%202025/RisingOS_Revived-7.0-250417-1742-CORE-COMMUNITY-courbet.zip?viasf=1"
     },
     {
@@ -215,6 +336,8 @@
       "android_version": "16",
       "version": "8.0",
       "date": "2025-07-31",
+      "status": "Beta",
+      "whats_new": ["Initial release of RisingOS Revived v8.0 Rom"],
       "download_url": "https://phoenixnap.dl.sourceforge.net/project/courbet-roms/A16/RisingOS/31%20July%202025/RisingOS_Revived-8.0-250731-0607-CORE-COMMUNITY-courbet.zip?viasf=1"
     }
   ]

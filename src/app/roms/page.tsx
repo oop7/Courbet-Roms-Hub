@@ -1,5 +1,11 @@
 import { roms } from '@/lib/roms';
 import { RomCard } from '@/components/RomCard';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'All Custom ROMs',
+  description: 'Browse the complete collection of the latest and most stable custom ROMs available for the Xiaomi Mi 11 Lite 4G (Courbet).',
+};
 
 export default function RomsPage() {
   return (

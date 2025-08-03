@@ -3,6 +3,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Terminal, Download, AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Rooting Guide',
+    description: 'Learn how to easily root your Xiaomi Mi 11 Lite 4G (Courbet) on our custom ROMs using KernelSU. Step-by-step instructions for a safe rooting process.',
+};
 
 export default function RootGuidePage() {
   return (

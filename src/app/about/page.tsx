@@ -1,6 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Cpu, Github, Send, Users } from "lucide-react";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'About Us',
+    description: 'Learn about the mission behind Courbet ROMs Hub, our passion for the Xiaomi Mi 11 Lite 4G, and the community members who make this project possible.',
+};
 
 export default function AboutPage() {
   return (
@@ -59,12 +65,12 @@ export default function AboutPage() {
           </CardHeader>
           <CardContent className="flex flex-col sm:flex-row gap-4">
             <Button asChild className="w-full" variant="outline">
-               <a href="https://t.me/melo159roms" target="_blank" rel="noopener noreferrer">
+               <a href="https.t.me/melo159roms" target="_blank" rel="noopener noreferrer">
                   <Send className="mr-2 h-4 w-4" /> ROM Releases Channel
                 </a>
             </Button>
             <Button asChild className="w-full" variant="outline">
-                <a href="https://t.me/melo159chat" target="_blank" rel="noopener noreferrer">
+                <a href="https.t.me/melo159chat" target="_blank" rel="noopener noreferrer">
                   <Users className="mr-2 h-4 w-4" /> Discussion Channel
                 </a>
             </Button>
@@ -74,11 +80,11 @@ export default function AboutPage() {
       <div className="text-center mt-16">
         <h2 className="text-2xl font-bold mb-4">Want to contribute?</h2>
         <p className="text-muted-foreground mb-6">This project is open-source. We welcome contributions of all kinds.</p>
-        <a href="https://github.com/oop7/Courbet-Roms-Hub" target="_blank" rel="noopener noreferrer">
-          <Button variant="outline">
-            <Github className="mr-2 h-4 w-4" /> View on GitHub
-          </Button>
-        </a>
+        <Button asChild variant="outline">
+            <a href="https://github.com/oop7/Courbet-Roms-Hub" target="_blank" rel="noopener noreferrer">
+              <Github className="mr-2 h-4 w-4" /> View on GitHub
+            </a>
+        </Button>
       </div>
     </div>
   );
