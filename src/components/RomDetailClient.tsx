@@ -2,19 +2,21 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { CheckCircle, Code, Download, ShieldCheck, Calendar, BookOpen, Clock, KeyRound, Info } from 'lucide-react';
+import { CheckCircle, Code, ShieldCheck, Calendar, BookOpen, Clock, KeyRound, Info } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { Rom, RomVersion } from '@/lib/roms';
 import { PreviousReleaseDetails } from '@/components/PreviousReleaseDetails';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { DownloadButton } from './DownloadButton';
+import { MobileDownloadInfo } from './MobileDownloadInfo';
 
 
 const RomVersionDetails = ({ version }: { version: RomVersion }) => {
+  const isCrDroid = version.downloadLink.includes('crdroid.net');
+  
   return (
     <div className="space-y-8">
       <Card className="bg-secondary/50">
@@ -53,12 +55,16 @@ const RomVersionDetails = ({ version }: { version: RomVersion }) => {
         </Alert>
       )}
 
+      {!isCrDroid && <MobileDownloadInfo />}
 
-      <Button asChild size="lg" className="w-full shadow-glow-primary hover:shadow-none transition-all duration-300">
-        <Link href={version.downloadLink} target="_blank" rel="noopener noreferrer">
-          <Download className="mr-2 h-5 w-5" /> Download Latest
-        </Link>
-      </Button>
+      <DownloadButton 
+        url={version.downloadLink}
+        variant='default'
+        size='lg'
+        className="w-full shadow-glow-primary hover:shadow-none transition-all duration-300"
+      >
+        Download Latest
+      </DownloadButton>
 
       <Card className="bg-secondary/50">
         <CardHeader>
