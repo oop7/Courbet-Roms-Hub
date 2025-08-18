@@ -41,6 +41,19 @@
       "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/Evolution-X/10%20August%202025/EvolutionX-16.0-20250810-courbet-11.0-Unofficial.zip/download"
     },
     {
+      "file_name": "axion-2.0-BETA-20250818-COMMUNITY-GMS-courbet.zip",
+      "rom_type": "AxionOS",
+      "android_version": "16",
+      "version": "2.0 Beta 2",
+      "date": "2025-08-18",
+      "status": "Beta",
+      "whats_new": [
+        "Beta 2 - August spl",
+        "Fixed Gapps"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/AxionOS/18%20August%202025/axion-2.0-BETA-20250818-COMMUNITY-GMS-courbet.zip/download"
+    },
+    {
       "file_name": "axion-2.0-BETA-20250726-COMMUNITY-GMS-courbet.zip",
       "rom_type": "AxionOS",
       "android_version": "16",
