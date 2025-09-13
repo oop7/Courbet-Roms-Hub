@@ -2,6 +2,20 @@
 {
   "roms": [
     {
+      "file_name": "EvolutionX-16.0-20250913-courbet-11.2-Unofficial.zip",
+      "rom_type": "EvolutionX",
+      "android_version": "16",
+      "version": "11.2",
+      "date": "2025-09-13",
+      "status": "Stable",
+      "whats_new": [
+        "September patches",
+        "Switched to AIDL livedisplay",
+        "Updated XiaomiParts from sweet"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/Evolution-X/13%20September%202025/EvolutionX-16.0-20250913-courbet-11.2-Unofficial.zip/download"
+    },
+    {
       "file_name": "lineage-22.2-20250827-UNOFFICIAL-courbet.zip",
       "rom_type": "LineageOS",
       "android_version": "15",
