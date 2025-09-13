@@ -196,32 +196,42 @@ for (const romName in romsByType) {
   processedRoms[rom.slug] = rom;
 }
 
-// Manually add crDroid
+// Manually add/update crDroid
 const crDroidSlug = 'crdroid';
-if (!processedRoms[crDroidSlug]) {
-    processedRoms[crDroidSlug] = {
-        slug: crDroidSlug,
-        name: 'crDroid',
-        description: romDescriptions['crDroid'],
-        maintainer: 'crDroid Team',
-        imageUrl: `/banners/${bannerFileNames['crDroid']}`,
-        imageHint: imageHints[crDroidSlug],
-        versions: [
-            {
-                androidVersion: '15',
-                status: 'Stable',
-                downloadLink: 'https://crdroid.net/courbet/11',
-                lastUpdated: '2025-07-20',
-                rootMethod: 'KernelSU Next',
-                whatsNew: [
-                    'crDroid version 11.7',
-                    'Please visit the official crDroid changelog for detailed updates.',
-                ],
-                note: "We don't provide a direct link for crDroid to support them. Please visit their official website.",
-            },
-        ],
-    };
-}
+processedRoms[crDroidSlug] = {
+    slug: crDroidSlug,
+    name: 'crDroid',
+    description: romDescriptions['crDroid'],
+    maintainer: 'crDroid Team',
+    imageUrl: `/banners/${bannerFileNames['crDroid']}`,
+    imageHint: imageHints[crDroidSlug],
+    versions: [
+        {
+            androidVersion: '16',
+            status: 'Stable',
+            downloadLink: 'https://crdroid.net/courbet/12',
+            lastUpdated: '2025-08-31',
+            rootMethod: 'KernelSU Next',
+            whatsNew: [
+                'Initial crDroid v12 release',
+                'Please visit the official crDroid changelog for detailed updates.',
+            ],
+            note: "We don't provide a direct link for crDroid to support them. Please visit their official website.",
+        },
+        {
+            androidVersion: '15',
+            status: 'Stable',
+            downloadLink: 'https://crdroid.net/courbet/11',
+            lastUpdated: '2025-07-20',
+            rootMethod: 'KernelSU Next',
+            whatsNew: [
+                'crDroid version 11.7',
+                'Please visit the official crDroid changelog for detailed updates.',
+            ],
+            note: "We don't provide a direct link for crDroid to support them. Please visit their official website.",
+        },
+    ],
+};
 
 
 // Sort final list to show Android 16 ROMs first, then alphabetically
