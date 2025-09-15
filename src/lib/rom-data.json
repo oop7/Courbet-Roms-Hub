@@ -2,6 +2,20 @@
 {
   "roms": [
     {
+      "file_name": "RisingOS_Revived-8.1-250914-xxxx-CORE-COMMUNITY-courbet-ota.zip",
+      "rom_type": "RisingOS Revived",
+      "android_version": "16",
+      "version": "8.1",
+      "date": "2025-09-14",
+      "status": "Stable",
+      "whats_new": [
+        "September security patches",
+        "Switched to AIDL livedisplay",
+        "Updated XiaomiParts from sweet"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/RisingOS/15%20August%202025/RisingOS_Revived-8.1-250815-1036-CORE-COMMUNITY-courbet-ota.zip/download"
+    },
+    {
       "file_name": "EvolutionX-16.0-20250913-courbet-11.2-Unofficial.zip",
       "rom_type": "EvolutionX",
       "android_version": "16",
