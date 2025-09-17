@@ -210,11 +210,13 @@ processedRoms[crDroidSlug] = {
             androidVersion: '16',
             status: 'Stable',
             downloadLink: 'https://crdroid.net/courbet/12',
-            lastUpdated: '2025-08-31',
+            lastUpdated: '2025-09-16',
             rootMethod: 'KernelSU Next',
             whatsNew: [
-                'Initial crDroid v12 release',
-                'Please visit the official crDroid changelog for detailed updates.',
+                'crDroid v12.1 with September security patches',
+                'Fixed missing fingerprint issue',
+                'Migrated to AIDL livedisplay',
+                'Update XiaomiParts from sweet'
             ],
             note: "We don't provide a direct link for crDroid to support them. Please visit their official website.",
         },
