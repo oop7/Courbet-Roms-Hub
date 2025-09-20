@@ -2,6 +2,22 @@
 {
   "roms": [
     {
+      "file_name": "Project_Infinity-X-3.2-courbet-20250920-0538-GAPPS-UNOFFICIAL.zip",
+      "rom_type": "Infinity-X",
+      "android_version": "16",
+      "version": "3.2",
+      "date": "2025-09-20",
+      "status": "Stable",
+      "whats_new": [
+        "September security patches",
+        "Migrated to AIDL livedisplay",
+        "Updated KernelSU-Next to v1.0.9",
+        "Updated SuSFS to v1.5.9",
+        "Updated XiaomiParts from sweet"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/Infinity-X/20%20September%202025/Project_Infinity-X-3.2-courbet-20250920-0538-GAPPS-UNOFFICIAL.zip/download"
+    },
+    {
       "file_name": "EvolutionX-16.0-20250917-courbet-11.2-Unofficial.zip",
       "rom_type": "EvolutionX",
       "android_version": "16",
@@ -489,5 +505,3 @@
     }
   ]
 }
-
-    
