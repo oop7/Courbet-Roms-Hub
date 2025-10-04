@@ -5,6 +5,7 @@ import { Footer } from '@/components/layout/Footer';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
   title: {
@@ -32,6 +33,7 @@ export default function RootLayout({
         <Footer />
         <Toaster />
         {process.env.NODE_ENV === 'production' && <Analytics />}
+        {process.env.NODE_ENV === 'production' && <SpeedInsights />}
       </body>
     </html>
   );
