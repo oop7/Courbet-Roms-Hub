@@ -15,20 +15,6 @@
       "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/Infinity-X/10%20October%202025/Project_Infinity-X-3.3-courbet-20251009-1902-GAPPS-UNOFFICIAL.zip/download"
     },
     {
-      "file_name": "EvolutionX-16.0-20251009-courbet-11.3-Unofficial.zip",
-      "rom_type": "EvolutionX",
-      "android_version": "16",
-      "version": "11.3",
-      "date": "2025-10-09",
-      "status": "Stable",
-      "whats_new": [
-        "October Security patches",
-        "Switched to new Leica Miuicamera",
-        "Synced with latest EvoX sources"
-      ],
-      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/Evolution-X/09%20October%202025/EvolutionX-16.0-20251009-courbet-11.3-Unofficial.zip/download"
-    },
-    {
       "file_name": "Project_Infinity-X-3.2-courbet-20250920-0538-GAPPS-UNOFFICIAL.zip",
       "rom_type": "Infinity-X",
       "android_version": "16",
