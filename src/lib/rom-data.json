@@ -2,6 +2,37 @@
 {
   "roms": [
     {
+      "file_name": "EvolutionX-16.0-20251013-courbet-11.3-Unofficial.zip",
+      "rom_type": "EvolutionX",
+      "android_version": "16",
+      "version": "11.3",
+      "date": "2025-10-12",
+      "status": "Stable",
+      "whats_new": [
+        "Fixed bootloop issue",
+        "October Security patches",
+        "Switched to new Leica Miuicamera",
+        "Synced with latest EvoX sources"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/Evolution-X/13%20October%202025/EvolutionX-16.0-20251013-courbet-11.3-Unofficial.zip/download"
+    },
+    {
+      "file_name": "axion-2.1-NIGHTLY-20251013-COMMUNITY-GMS-courbet.zip",
+      "rom_type": "AxionOS",
+      "android_version": "16",
+      "version": "2.1",
+      "date": "2025-10-13",
+      "status": "Stable",
+      "whats_new": [
+        "October security patches",
+        "Migrated to AIDL livedisplay",
+        "Updated KernelSU-Next to v1.0.9",
+        "Updated SuSFS to v1.5.9",
+        "Updated XiaomiParts from sweet"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/AxionOS/13%20October%202025/axion-2.1-NIGHTLY-20251013-COMMUNITY-GMS-courbet.zip/download"
+    },
+    {
       "file_name": "Project_Infinity-X-3.3-courbet-20251009-1902-GAPPS-UNOFFICIAL.zip",
       "rom_type": "Infinity-X",
       "android_version": "16",
@@ -518,5 +549,9 @@
     }
   ]
 }
+
+    
+
+    
 
     
