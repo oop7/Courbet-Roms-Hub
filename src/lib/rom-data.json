@@ -2,6 +2,32 @@
 {
   "roms": [
     {
+      "file_name": "Project_Infinity-X-3.3-courbet-20251018-1036-GAPPS-UNOFFICIAL.zip",
+      "rom_type": "Infinity-X",
+      "android_version": "16",
+      "version": "3.3",
+      "date": "2025-10-18",
+      "status": "Stable",
+      "whats_new": [
+        "October security patches",
+        "Fixed missing camera app",
+        "Synced with latest rom sources"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/Infinity-X/18%20October%202025/Project_Infinity-X-3.3-courbet-20251018-1036-GAPPS-UNOFFICIAL.zip/download"
+    },
+    {
+      "file_name": "lineage-23.0-20251016-UNOFFICIAL-courbet.zip",
+      "rom_type": "LineageOS",
+      "android_version": "16",
+      "version": "23.0",
+      "date": "2025-10-16",
+      "status": "Beta",
+      "whats_new": [
+        "Initial release"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/LineageOS/16%20October%202025/lineage-23.0-20251016-UNOFFICIAL-courbet.zip/download"
+    },
+    {
       "file_name": "EvolutionX-16.0-20251013-courbet-11.3-Unofficial.zip",
       "rom_type": "EvolutionX",
       "android_version": "16",
@@ -31,19 +57,6 @@
         "Updated XiaomiParts from sweet"
       ],
       "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/AxionOS/13%20October%202025/axion-2.1-NIGHTLY-20251013-COMMUNITY-GMS-courbet.zip/download"
-    },
-    {
-      "file_name": "Project_Infinity-X-3.3-courbet-20251009-1902-GAPPS-UNOFFICIAL.zip",
-      "rom_type": "Infinity-X",
-      "android_version": "16",
-      "version": "3.3",
-      "date": "2025-10-10",
-      "status": "Stable",
-      "whats_new": [
-        "October security patches",
-        "Switched to new Leica Miuicamera"
-      ],
-      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/Infinity-X/10%20October%202025/Project_Infinity-X-3.3-courbet-20251009-1902-GAPPS-UNOFFICIAL.zip/download"
     },
     {
       "file_name": "Project_Infinity-X-3.2-courbet-20250920-0538-GAPPS-UNOFFICIAL.zip",
@@ -549,9 +562,3 @@
     }
   ]
 }
-
-    
-
-    
-
-    

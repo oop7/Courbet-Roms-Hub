@@ -51,6 +51,7 @@ export default function AboutPage() {
               <li>The teams behind KernelSU, KernelSU Next, TWRP, and OrangeFox.</li>
               <li>Teplaothis, for providing valuable testing and feedback.</li>
               <li>PixelOS devs, aryan and other devs for the trees and the kernel</li>
+              <li>pratikkabra143 for keeping KSU-N updated</li>
             </ul>
           </CardContent>
         </Card>
