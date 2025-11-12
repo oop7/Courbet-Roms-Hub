@@ -73,17 +73,17 @@ const imageHints: Record<string, string> = {
 }
 
 const bannerFileNames: Record<string, string> = {
-  'AlphaDroid': 'alpha.png',
-  'AxionOS': 'AXION.jpg',
-  'EvolutionX': 'evolution_x.png',
-  'Infinity-X': 'ProjectInfinityX.jpg',
-  'LineageOS': 'Lineage.jpg',
-  'PixelOS': 'pixelos.jpg',
-  'RisingOS': 'RisingOS.jpg',
-  'RisingOS Revived': 'RisingOS_Revived.jpg',
-  'The Pixel Project': 'ThePixelProject.png',
-  'VoltageOS': 'voltage.png',
-  'crDroid': 'CrDroid.jpg',
+  'AlphaDroid': 'alpha.webp',
+  'AxionOS': 'AXION.webp',
+  'EvolutionX': 'evolution_x.webp',
+  'Infinity-X': 'ProjectInfinityX.webp',
+  'LineageOS': 'Lineage.webp',
+  'PixelOS': 'pixelos.webp',
+  'RisingOS': 'RisingOS.webp',
+  'RisingOS Revived': 'RisingOS_Revived.webp',
+  'The Pixel Project': 'ThePixelProject.webp',
+  'VoltageOS': 'voltage.webp',
+  'crDroid': 'CrDroid.webp',
 };
 
 const processedRoms: Record<string, Rom> = {};
@@ -210,11 +210,10 @@ processedRoms[crDroidSlug] = {
             androidVersion: '16',
             status: 'Stable',
             downloadLink: 'https://crdroid.net/courbet/12',
-            lastUpdated: '2025-10-12',
+            lastUpdated: '2025-11-09',
             rootMethod: 'KernelSU Next',
             whatsNew: [
-                'crDroid v12.2 with October security patches',
-                'Switched to new Leica Miuicamera',
+                'crDroid v12.3 with November security patches',
                 'Synced with latest crDroid sources'
             ],
             note: "We don't provide a direct link for crDroid to support them. Please visit their official website.",
@@ -235,19 +234,12 @@ processedRoms[crDroidSlug] = {
 };
 
 
-// Sort final list to show Android 16 ROMs first, then alphabetically
+// Sort final list to show the most recently updated ROMs first.
 export const roms: Rom[] = Object.values(processedRoms).sort((a, b) => {
-  const aHas16 = a.versions.some(v => v.androidVersion === '16');
-  const bHas16 = b.versions.some(v => v.androidVersion === '16');
+  const aDate = a.versions[0]?.lastUpdated || '1970-01-01';
+  const bDate = b.versions[0]?.lastUpdated || '1970-01-01';
 
-  if (aHas16 && !bHas16) {
-    return -1; // a comes first
-  }
-  if (!aHas16 && bHas16) {
-    return 1; // b comes first
-  }
-  // If both have or don't have Android 16, sort by name
-  return a.name.localeCompare(b.name);
+  return new Date(bDate).getTime() - new Date(aDate).getTime();
 });
 
 export const getRomBySlug = (slug: string): Rom | undefined => {
