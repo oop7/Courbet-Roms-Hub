@@ -1,6 +1,56 @@
 
+
 {
   "roms": [
+    {
+      "file_name": "Project_Infinity-X-3.4-courbet-10.11.2025-GAPPS-UNOFFICIAL.zip",
+      "rom_type": "Infinity-X",
+      "android_version": "16",
+      "version": "3.4",
+      "date": "2025-11-10",
+      "status": "Stable",
+      "whats_new": [
+        "November security patches",
+        "Synced with latest rom sources"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/Infinity-X/10%20November%202025/Project_Infinity-X-3.4-courbet-10.11.2025-GAPPS-UNOFFICIAL.zip/download"
+    },
+    {
+      "file_name": "lineage-23.0-20251110-UNOFFICIAL-courbet.zip",
+      "rom_type": "LineageOS",
+      "android_version": "16",
+      "version": "23.0",
+      "date": "2025-11-10",
+      "status": "Stable",
+      "whats_new": [
+        "November security patches"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/LineageOS/10%20November%202025/lineage-23.0-20251110-UNOFFICIAL-courbet.zip/download"
+    },
+    {
+      "file_name": "RisingOS_Revived-8.1.1-251107-1646-CORE-COMMUNITY-courbet.zip",
+      "rom_type": "RisingOS Revived",
+      "android_version": "16",
+      "version": "8.1.1",
+      "date": "2025-11-07",
+      "status": "Stable",
+      "whats_new": [
+        "November security patches"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/RisingOS/07%20November%202025/RisingOS_Revived-8.1.1-251107-1646-CORE-COMMUNITY-courbet.zip/download"
+    },
+    {
+      "file_name": "EvolutionX-16.0-20251104-courbet-11.4-Unofficial.zip",
+      "rom_type": "EvolutionX",
+      "android_version": "16",
+      "version": "11.4",
+      "date": "2025-11-04",
+      "status": "Stable",
+      "whats_new": [
+        "November security patches"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/Evolution-X/04%20November%202025/EvolutionX-16.0-20251104-courbet-11.4-Unofficial.zip/download"
+    },
     {
       "file_name": "Project_Infinity-X-3.3-courbet-20251018-1036-GAPPS-UNOFFICIAL.zip",
       "rom_type": "Infinity-X",
@@ -562,3 +612,4 @@
     }
   ]
 }
+
