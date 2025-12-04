@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Terminal, Download, AlertTriangle } from 'lucide-react';
@@ -7,7 +6,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Rooting Guide',
-    description: 'Learn how to easily root your Xiaomi Mi 11 Lite 4G (Courbet) on our custom ROMs using KernelSU. Step-by-step instructions for a safe rooting process.',
+    description: 'Learn how to easily root your Xiaomi Mi 11 Lite 4G (Courbet) on our custom ROMs using KernelSU Next. Step-by-step instructions for a safe rooting process.',
 };
 
 export default function RootGuidePage() {
@@ -37,7 +36,7 @@ export default function RootGuidePage() {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground">
-              All custom ROMs in this hub have KernelSU support built directly into their source-inline-built kernel, which simplifies the rooting process compared to traditional methods. <strong className="text-primary">You don't need to flash additional kernels or modify system partitions manually.</strong> You only need to install the appropriate root manager app to get started.
+              All custom ROMs in this hub have KernelSU support built directly into their kernel, which simplifies the rooting process. You only need to install the KernelSU Next manager app to get started.
             </p>
           </CardContent>
         </Card>
@@ -58,49 +57,25 @@ export default function RootGuidePage() {
               </div>
             </div>
             <div className="flex items-start">
-              <span className="text-primary mr-4 text-2xl font-bold">2</span>
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold mb-2">Identify the Root Manager Type</h3>
-                <p className="text-muted-foreground">Check the ROM's release page or description to determine which root manager is supported:</p>
-                <ul className="list-disc list-inside text-muted-foreground space-y-1 mt-2">
-                    <li><strong>KernelSU</strong> (original)</li>
-                    <li><strong>KernelSU Next</strong> (newer variant)</li>
-                </ul>
-              </div>
+                <span className="text-primary mr-4 text-2xl font-bold">2</span>
+                <div className="flex-1">
+                    <h3 className="text-xl font-semibold mb-2">Download the KernelSU Next Manager</h3>
+                    <p className="text-muted-foreground mb-4">All ROMs on this hub use KernelSU Next. Download the manager app from the official source below.</p>
+                    <Button asChild variant="outline" className="w-full">
+                        <a href="https://github.com/KernelSU-Next/KernelSU-Next/releases/download/v1.1.1/KernelSU_Next_v1.1.1_12851-release.apk" target="_blank" rel="noopener noreferrer">
+                            <Download className="mr-2 h-4 w-4" />
+                            KernelSU Next Manager v1.1.1
+                        </a>
+                    </Button>
+                </div>
             </div>
             <div className="flex items-start">
                 <span className="text-primary mr-4 text-2xl font-bold">3</span>
                 <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2">Download the Appropriate Manager</h3>
-                    <div className="flex flex-col gap-4">
-                        <div>
-                            <h4 className="font-semibold mb-2 text-foreground">For KernelSU:</h4>
-                            <Button asChild variant="outline" className="w-full">
-                                <a href="https://github.com/tiann/KernelSU/releases/download/v1.0.5/KernelSU_v1.0.5_12081-release.apk" target="_blank" rel="noopener noreferrer">
-                                    <Download className="mr-2 h-4 w-4" />
-                                    KernelSU Manager v1.0.5
-                                </a>
-                            </Button>
-                        </div>
-                        <div>
-                            <h4 className="font-semibold mb-2 text-foreground">For KernelSU Next:</h4>
-                            <Button asChild variant="outline" className="w-full">
-                                <a href="https://github.com/KernelSU-Next/KernelSU-Next/releases/download/v1.0.9/KernelSU_Next_v1.0.9_12797-release.apk" target="_blank" rel="noopener noreferrer">
-                                    <Download className="mr-2 h-4 w-4" />
-                                    KernelSU Next Manager v1.0.9
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="flex items-start">
-                <span className="text-primary mr-4 text-2xl font-bold">4</span>
-                <div className="flex-1">
                     <h3 className="text-xl font-semibold mb-2">Install and Enable Root</h3>
                     <ol className="list-decimal list-inside text-muted-foreground space-y-1">
                         <li>Install the downloaded APK file.</li>
-                        <li>Open the KernelSU manager app.</li>
+                        <li>Open the KernelSU Next manager app.</li>
                         <li>The app should automatically detect kernel support and enable root access.</li>
                         <li>Grant root permissions to apps as needed.</li>
                     </ol>
@@ -118,8 +93,7 @@ export default function RootGuidePage() {
           </CardHeader>
           <CardContent>
             <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>Always check the ROM's release page for the correct root manager type.</li>
-                <li>Backup your data before flashing any ROM.</li>
+                <li>Always back up your data before flashing any ROM.</li>
                 <li>Root access can void warranties and potentially compromise security.</li>
                 <li>Keep the manager app updated for optimal compatibility.</li>
             </ul>
@@ -132,9 +106,10 @@ export default function RootGuidePage() {
           </CardHeader>
           <CardContent>
             <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>If root is not detected, verify you downloaded the correct manager for your ROM.</li>
-                <li>Ensure your ROM actually supports the root method (check ROM documentation).</li>
+                <li>If root is not detected, ensure you have installed the correct KernelSU Next manager.</li>
+                <li>Ensure your ROM was downloaded from this Hub, as they are confirmed to have kernel support.</li>
                 <li>Try rebooting after installing the manager app.</li>
+                <li>If an installed module that uses WebUI-X doesn't open its interface, try downgrading the KernelSU Next manager app.</li>
             </ul>
             <p className="mt-4 text-sm text-muted-foreground/70">
               *This guide is specifically for MI 11 Lite 4G (Courbet) custom ROMs with built-in GKI kernel support.
