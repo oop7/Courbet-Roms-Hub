@@ -210,11 +210,10 @@ processedRoms[crDroidSlug] = {
             androidVersion: '16',
             status: 'Stable',
             downloadLink: 'https://crdroid.net/courbet/12',
-            lastUpdated: '2025-11-09',
+            lastUpdated: '2025-11-28',
             rootMethod: 'KernelSU Next',
             whatsNew: [
-                'crDroid v12.3 with November security patches',
-                'Synced with latest crDroid sources'
+                'Synced with latest crDroid and LineageOS sources'
             ],
             note: "We don't provide a direct link for crDroid to support them. Please visit their official website.",
         },
@@ -238,7 +237,9 @@ processedRoms[crDroidSlug] = {
 export const roms: Rom[] = Object.values(processedRoms).sort((a, b) => {
   const aDate = a.versions[0]?.lastUpdated || '1970-01-01';
   const bDate = b.versions[0]?.lastUpdated || '1970-01-01';
-
+  if (aDate === 'N/A' && bDate === 'N/A') return 0;
+  if (aDate === 'N/A') return 1;
+  if (bDate === 'N/A') return -1;
   return new Date(bDate).getTime() - new Date(aDate).getTime();
 });
 
