@@ -2,8 +2,9 @@
 import { getRomBySlug } from '@/lib/roms';
 import { RomDetailClient } from '@/components/RomDetailClient';
 
-export default function RomDetailPage({ params }: { params: { slug: string } }) {
-  const rom = getRomBySlug(params.slug);
+export default async function RomDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const rom = getRomBySlug(slug);
 
   if (!rom) {
     return (

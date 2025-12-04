@@ -39,3 +39,4 @@ firestore-debug.log
 
 # TypeScript
 *.tsbuildinfo
+*.log

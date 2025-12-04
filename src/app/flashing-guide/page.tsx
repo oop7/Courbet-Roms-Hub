@@ -4,7 +4,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
-import { Download, AlertTriangle, ShieldCheck, Trash2, Layers, Tv, FileZip, Battery, Cable, BookUser, Cpu, Clock, HelpCircle, HardDrive, Clipboard, Check } from 'lucide-react';
+import { Download, AlertTriangle, ShieldCheck, Trash2, Layers, Tv, FileArchive, Battery, Cable, BookUser, Cpu, Clock, HelpCircle, HardDrive, Clipboard, Check } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import { CodeBlock } from '@/components/CodeBlock';
