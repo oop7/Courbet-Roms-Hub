@@ -3,6 +3,19 @@
 {
   "roms": [
     {
+      "file_name": "EvolutionX-16.0-20251203-courbet-11.5-Unofficial.zip",
+      "rom_type": "EvolutionX",
+      "android_version": "16",
+      "version": "11.5",
+      "date": "2025-12-03",
+      "status": "Stable",
+      "whats_new": [
+        "QPR1 update with november security patches",
+        "Device stability and smoothness improvements"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/Evolution-X/03%20December%202025/EvolutionX-16.0-20251203-courbet-11.5-Unofficial.zip/download"
+    },
+    {
       "file_name": "Project_Infinity-X-3.4-courbet-10.11.2025-GAPPS-UNOFFICIAL.zip",
       "rom_type": "Infinity-X",
       "android_version": "16",
@@ -613,3 +626,6 @@
   ]
 }
 
+
+
+    
