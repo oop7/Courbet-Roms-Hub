@@ -24,8 +24,7 @@
       "date": "2025-12-08",
       "status": "Beta",
       "whats_new": [
-        "Initial release",
-        "For detailed rom changelog visit their own groups or site"
+        "Initial release"
       ],
       "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/PixelOS/08%20December%202025/PixelOS_courbet-16.1-20251208-1611.zip/download"
     },
@@ -38,8 +37,7 @@
       "status": "Stable",
       "whats_new": [
         "December security patches",
-        "Improved device stability and smoothness",
-        "For detailed rom changelog visit their own groups or site"
+        "Improved device stability and smoothness"
       ],
       "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/AxionOS/08%20December%202025/axion-2.2.1-NIGHTLY-20251208-UNOFFICIAL-GMS-courbet.zip/download"
     },
@@ -403,8 +401,7 @@
       "whats_new": [
         "June security patches",
         "Fixed vibration intensity setting",
-        "Zram improvements",
-        "For more info about rom changes see axion changelog repo"
+        "Zram improvements"
       ],
       "download_url": "https://sourceforge.net/projects/courbet-roms/files/A15/AxionOS/08%20June%202025/axion-1.5-NIGHTLY-20250608-COMMUNITY-GMS-courbet.zip/download"
     },
@@ -476,8 +473,7 @@
       "date": "2025-05-08",
       "status": "Stable",
       "whats_new": [
-        "May security patches",
-        "For more info about changes see axion changelog repo"
+        "May security patches"
       ],
       "download_url": "https://sourceforge.net/projects/courbet-roms/files/A15/AxionOS/08%20May%202025/axion-1.4-NIGHTLY-20250508-COMMUNITY-GMS-courbet.zip/download"
     },
@@ -607,8 +603,7 @@
       "status": "Stable",
       "whats_new": [
         "June security patches",
-        "Tons of sepolicy denials fixes",
-        "For more detailed rom changelog, see RisingOS changelog repo"
+        "Tons of sepolicy denials fixes"
       ],
       "download_url": "https://sourceforge.net/projects/courbet-roms/files/A15/RisingOS/14%20June%202025/RisingOS_Revived-7.1-250614-1022-CORE-COMMUNITY-courbet.zip/download"
     },
@@ -620,8 +615,7 @@
       "date": "2025-05-08",
       "status": "Stable",
       "whats_new": [
-        "May security patches",
-        "For more detailed rom changelog, see RisingOS changelog repo"
+        "May security patches"
       ],
       "download_url": "https://sourceforge.net/projects/courbet-roms/files/A15/RisingOS/08%20May%202025/RisingOS_Revived-7.0-250508-0740-CORE-COMMUNITY-courbet.zip/download"
     },
