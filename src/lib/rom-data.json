@@ -3,6 +3,20 @@
 {
   "roms": [
     {
+      "file_name": "EvolutionX-16.0-20251218-courbet-11.5.1-Unofficial.zip",
+      "rom_type": "EvolutionX",
+      "android_version": "16",
+      "version": "11.5.1",
+      "date": "2025-12-18",
+      "status": "Stable",
+      "whats_new": [
+        "December security patches",
+        "Updated ambient display implementation (doze)",
+        "Other device performance improvements"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/Evolution-X/18%20December%202025/EvolutionX-16.0-20251218-courbet-11.5.1-Unofficial.zip/download"
+    },
+    {
       "file_name": "lineage-23.0-20251211-UNOFFICIAL-courbet.zip",
       "rom_type": "LineageOS",
       "android_version": "16",
