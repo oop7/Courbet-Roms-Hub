@@ -4,6 +4,20 @@
 {
   "roms": [
     {
+      "file_name": "Project_Infinity-X-3.6-courbet-29.12.2025-GAPPS-UNOFFICIAL.zip",
+      "rom_type": "Infinity-X",
+      "android_version": "16",
+      "version": "3.6",
+      "date": "2025-12-29",
+      "status": "Stable",
+      "whats_new": [
+        "QPR1 update",
+        "Other device stability and smoothness improvements",
+        "Synced with latest rom sources"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/Infinity-X/29%20December%202025/Project_Infinity-X-3.6-courbet-29.12.2025-GAPPS-UNOFFICIAL.zip/download"
+    },
+    {
       "file_name": "axion-2.3-BETA-20251226-UNOFFICIAL-GMS-courbet.zip",
       "rom_type": "AxionOS",
       "android_version": "16",
@@ -703,6 +717,8 @@
     }
   ]
 }
+
+    
 
     
 

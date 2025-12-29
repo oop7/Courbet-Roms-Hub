@@ -210,12 +210,12 @@ processedRoms[crDroidSlug] = {
             androidVersion: '16',
             status: 'Stable',
             downloadLink: 'https://crdroid.net/courbet/12',
-            lastUpdated: '2025-12-08',
+            lastUpdated: '2025-12-28',
             rootMethod: 'KernelSU Next',
             whatsNew: [
-                'crDroid v12.4 with December security patches',
-                'Improved device stability and smoothness',
-                'Synced with latest crDroid and LineageOS sources'
+                'crDroid v12.5 QPR1 with December security patches',
+                'Other device stability and smoothness improvements',
+                'Updated ambient display implementation (doze)'
             ],
             note: "crDroid is a VANILLA build, meaning it does NOT include Google Apps. You MUST flash a GApps package (like NikGapps) right after flashing the ROM to avoid bootloops. We don't provide a direct link for crDroid to support them. Please visit their official website.",
         },
