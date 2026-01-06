@@ -8,7 +8,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://courbet-roms-hub.com'),
+  metadataBase: new URL('https://courbet-roms-hub.vercel.app'),
   title: {
     default: 'Courbet ROMs Hub',
     template: '%s | Courbet ROMs Hub',
