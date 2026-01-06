@@ -21,11 +21,20 @@ export const metadata: Metadata = {
     siteName: 'Courbet ROMs Hub',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Courbet ROMs Hub Preview',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Courbet ROMs Hub',
     description: 'The ultimate destination for custom ROMs for Xiaomi Mi 11 Lite 4G.',
+    images: ['/og-image.jpg'],
   },
 };
 
