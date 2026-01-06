@@ -6,5 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
+    sitemap: 'https://courbet-roms-hub.com/sitemap.xml',
   }
 }

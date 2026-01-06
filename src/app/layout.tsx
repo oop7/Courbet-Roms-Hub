@@ -8,11 +8,25 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://courbet-roms-hub.com'),
   title: {
     default: 'Courbet ROMs Hub',
     template: '%s | Courbet ROMs Hub',
   },
   description: 'The ultimate destination for custom ROMs, guides, and resources for the Xiaomi Mi 11 Lite 4G (courbet). Find the best and most stable ROMs all in one place.',
+  openGraph: {
+    title: 'Courbet ROMs Hub',
+    description: 'The ultimate destination for custom ROMs, guides, and resources for the Xiaomi Mi 11 Lite 4G (courbet).',
+    url: 'https://courbet-roms-hub.com',
+    siteName: 'Courbet ROMs Hub',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Courbet ROMs Hub',
+    description: 'The ultimate destination for custom ROMs for Xiaomi Mi 11 Lite 4G.',
+  },
 };
 
 export default function RootLayout({
