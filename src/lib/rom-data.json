@@ -4,6 +4,20 @@
 {
   "roms": [
     {
+      "file_name": "Project_Infinity-X-3.6-courbet-06.01.2026-GAPPS-UNOFFICIAL.zip",
+      "rom_type": "Infinity-X",
+      "android_version": "16",
+      "version": "3.6",
+      "date": "2026-01-06",
+      "status": "Stable",
+      "whats_new": [
+        "January 2026 security patches",
+        "Switched to Leica Miuicamera",
+        "Synced with latest rom sources"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/Infinity-X/06%20January%202026/Project_Infinity-X-3.6-courbet-06.01.2026-GAPPS-UNOFFICIAL.zip/download"
+    },
+    {
       "file_name": "Project_Infinity-X-3.6-courbet-29.12.2025-GAPPS-UNOFFICIAL.zip",
       "rom_type": "Infinity-X",
       "android_version": "16",
@@ -717,6 +731,8 @@
     }
   ]
 }
+
+    
 
     
 
