@@ -4,6 +4,32 @@
 {
   "roms": [
     {
+      "file_name": "lineage-23.1-20260110-UNOFFICIAL-courbet.zip",
+      "rom_type": "LineageOS",
+      "android_version": "16",
+      "version": "23.1",
+      "date": "2026-01-10",
+      "status": "Stable",
+      "whats_new": [
+        "QPR1 update with january patches",
+        "Other device stability and smoothness improvements"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/LineageOS/10%20January%202026/lineage-23.1-20260110-UNOFFICIAL-courbet.zip/download"
+    },
+    {
+      "file_name": "EvolutionX-16.0-20260107-courbet-11.6-Unofficial.zip",
+      "rom_type": "EvolutionX",
+      "android_version": "16",
+      "version": "11.6",
+      "date": "2026-01-07",
+      "status": "Stable",
+      "whats_new": [
+        "January 2026 security patches",
+        "Synced with latest rom sources"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-roms/files/A16/Evolution-X/07%20January%202026/EvolutionX-16.0-20260107-courbet-11.6-Unofficial.zip/download"
+    },
+    {
       "file_name": "Project_Infinity-X-3.6-courbet-06.01.2026-GAPPS-UNOFFICIAL.zip",
       "rom_type": "Infinity-X",
       "android_version": "16",
