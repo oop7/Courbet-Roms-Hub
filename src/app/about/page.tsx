@@ -48,6 +48,7 @@ export default function AboutPage() {
             </p>
             <ul className="list-disc list-inside space-y-2">
               <li><a href="https://github.com/meloalfa159" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"><strong>melo159</strong></a>, for tirelessly building and maintaining all the custom ROMs featured here.</li>
+              <li><a href="https://t.me/smwnheree" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"><strong>Aska</strong></a>, the maintainer and builder of ports.</li>
               <li>The teams behind KernelSU, KernelSU Next, TWRP, and OrangeFox.</li>
               <li>Teplaothis, for providing valuable testing and feedback.</li>
               <li>PixelOS devs, aryan and other devs for the trees and the kernel</li>
