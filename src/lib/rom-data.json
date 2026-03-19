@@ -34,6 +34,25 @@
       "download_url": "https://drive.google.com/file/d/1jZXkotohO074RlNfPDM7e10ervvX47yP/view?usp=drivesdk"
     },
     {
+      "file_name": "HyperOS_2.0.16.0_CN_courbet_20260217.zip",
+      "rom_type": "HyperOS 2.0.16.0 CN",
+      "category": "port",
+      "android_version": "14",
+      "version": "2.0.16.0 CN",
+      "date": "2026-02-17",
+      "status": "Beta",
+      "root_method": "None",
+      "whats_new": [
+        "Fixed AOD brightness.",
+        "Fixed lag on YouTube.",
+        "Fixed issue where swiping to reply in Telegram did not work.",
+        "Added KaoriOS Toolbox.",
+        "Switched to stock boot.img (non-rooted).",
+        "For detailed ROM changelog, visit their own groups or site."
+      ],
+      "download_url": "https://drive.google.com/file/d/1hLmTmSmXrTWI--7Nca9FPYvdIOUxA-Ue/view?usp=drive_link"
+    },
+    {
       "file_name": "lineage-23.1-20260110-UNOFFICIAL-courbet.zip",
       "rom_type": "LineageOS",
       "android_version": "16",
