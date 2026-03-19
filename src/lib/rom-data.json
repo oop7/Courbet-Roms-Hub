@@ -4,6 +4,36 @@
 {
   "roms": [
     {
+      "file_name": "ColorOS_15_Lite_courbet_20260317.zip",
+      "rom_type": "ColorOS 15 Lite",
+      "category": "port",
+      "android_version": "15",
+      "version": "15 Lite",
+      "date": "2026-03-17",
+      "status": "Beta",
+      "root_method": "None",
+      "whats_new": [
+        "What's working: NFC, vibration, Bluetooth, fingerprint, AOD, and other features.",
+        "Known bugs: D2TW (works for a second if AOD is enabled), face unlock."
+      ],
+      "download_url": "https://drive.google.com/file/d/1_XpM-eSUz8uxAI5TJljYF3gHgMin98K7/view?usp=drive_link"
+    },
+    {
+      "file_name": "HyperOS_3.0.1.0_EU_courbet_20260314.zip",
+      "rom_type": "HyperOS 3.0.1.0 EU",
+      "category": "port",
+      "android_version": "15",
+      "version": "3.0.1.0 EU",
+      "date": "2026-03-14",
+      "status": "Beta",
+      "root_method": "None",
+      "whats_new": [
+        "Bugs: Sometimes pressing the power button has around a one-second delay, and AOD auto brightness is not working (AOD brightness stays around middle to dim).",
+        "Includes Harman Kardon."
+      ],
+      "download_url": "https://drive.google.com/file/d/1jZXkotohO074RlNfPDM7e10ervvX47yP/view?usp=drivesdk"
+    },
+    {
       "file_name": "lineage-23.1-20260110-UNOFFICIAL-courbet.zip",
       "rom_type": "LineageOS",
       "android_version": "16",
