@@ -10,6 +10,8 @@ interface RomBuild {
   date: string;
   download_url: string;
   status: 'Stable' | 'Beta';
+  category?: 'rom' | 'port';
+  root_method?: 'KernelSU' | 'KernelSU Next' | 'None';
   whats_new: string[];
 }
 
@@ -17,7 +19,7 @@ export interface PreviousRelease {
   version: string;
   date: string;
   downloadLink: string;
-  rootMethod: 'KernelSU' | 'KernelSU Next';
+  rootMethod: 'KernelSU' | 'KernelSU Next' | 'None';
   whatsNew: string[];
   status: 'Stable' | 'Beta';
 }
@@ -27,14 +29,16 @@ export interface RomVersion {
   status: 'Stable' | 'Beta';
   downloadLink: string;
   whatsNew: string[];
+  tips?: { label: string; url?: string }[];
   lastUpdated: string;
-  rootMethod: 'KernelSU' | 'KernelSU Next';
+  rootMethod: 'KernelSU' | 'KernelSU Next' | 'None';
   previousReleases?: PreviousRelease[];
   note?: string;
 }
 
 export interface Rom {
   slug: string;
+  category: 'rom' | 'port';
   name: string;
   description: string;
   maintainer: string;
@@ -47,7 +51,9 @@ export interface Rom {
 const romDescriptions: Record<string, string> = {
   'AlphaDroid': 'A lightweight and performance-focused ROM, aiming to provide a smooth experience with essential customizations.',
   'AxionOS': 'AxionOS focuses on minimalism and stability, delivering a clean AOSP experience with useful additions.',
+  'ColorOS 15 Lite': 'A lightweight ColorOS-based port for courbet focused on daily usability and core hardware support.',
   'EvolutionX': 'A flashable custom ROM to bring a true Pixel feel to your Android Device, with many additional configurations at your disposal.',
+  'HyperOS 3.0.1.0 EU': 'A debloated HyperOS 3 EU port for courbet with core features and UI experience preserved.',
   'Infinity-X': 'Infinity-X offers a unique blend of features and customizations for a personalized Android experience.',
   'LineageOS': 'A free and open-source operating system for various devices, based on the Android mobile platform. Successor to CyanogenMod.',
   'PixelOS': 'Get the pure Pixel experience on your Courbet device. Smooth, stable, and packed with Google\'s best features.',
@@ -61,6 +67,7 @@ const romDescriptions: Record<string, string> = {
 const imageHints: Record<string, string> = {
     'alphadroid': 'abstract orange',
     'axionos': 'abstract purple',
+  'coloros-15-lite': 'coloros abstract teal',
     'evolution-x': 'evolution x logo',
     'infinity-x': 'abstract black',
     'lineageos': 'abstract green',
@@ -75,7 +82,9 @@ const imageHints: Record<string, string> = {
 const bannerFileNames: Record<string, string> = {
   'AlphaDroid': 'alpha.webp',
   'AxionOS': 'AXION.webp',
+  'ColorOS 15 Lite': 'colorOS_lite.webp',
   'EvolutionX': 'evolution_x.webp',
+  'HyperOS 3.0.1.0 EU': 'HyperOS_3.0.1.0 EU.webp',
   'Infinity-X': 'ProjectInfinityX.webp',
   'LineageOS': 'Lineage.webp',
   'PixelOS': 'pixelos.webp',
@@ -132,6 +141,7 @@ for (const romName in romsByType) {
   
   const rom: Rom = {
     slug: slug,
+    category: allBuilds.some(build => build.category === 'port') ? 'port' : 'rom',
     name: romName,
     description: romDescriptions[romName] || `A great custom ROM for your device.`,
     maintainer: 'melo159',
@@ -172,16 +182,43 @@ for (const romName in romsByType) {
       downloadLink: latestBuild.download_url,
       whatsNew: latestBuild.whats_new,
       lastUpdated: latestBuild.date === 'Unknown' ? 'N/A' : latestBuild.date,
-      rootMethod: getRootMethod(latestBuild.date),
+      rootMethod: latestBuild.root_method ?? getRootMethod(latestBuild.date),
       previousReleases: previousBuilds.map(pr => ({
         version: pr.version,
         date: pr.date === 'Unknown' ? 'N/A' : pr.date,
         downloadLink: pr.download_url,
-        rootMethod: getRootMethod(pr.date),
+        rootMethod: pr.root_method ?? getRootMethod(pr.date),
         status: pr.status,
         whatsNew: pr.whats_new,
       })),
     };
+
+    if (romName === 'ColorOS 15 Lite' && androidVersion === '15') {
+      romVersion.tips = [
+        {
+          label: 'If you want a blurred Control Center, use Lucky Tool',
+          url: 'https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool',
+        },
+        {
+          label: 'Camera app',
+          url: 'https://t.me/askastorage/58',
+        },
+      ];
+    }
+
+    if (romName === 'HyperOS 3.0.1.0 EU' && androidVersion === '15') {
+      romVersion.tips = [
+        {
+          label: 'The ROM may take time to settle, so some lag is expected on first boot',
+        },
+        {
+          label: 'For better performance, do not enable advanced texture in settings',
+        },
+        {
+          label: 'This ROM is a debloated version of Marble HyperOS 3 EU',
+        },
+      ];
+    }
     
     // Add note for crDroid
     if (romName === 'crDroid') {
@@ -200,6 +237,7 @@ for (const romName in romsByType) {
 const crDroidSlug = 'crdroid';
 processedRoms[crDroidSlug] = {
     slug: crDroidSlug,
+  category: 'rom',
     name: 'crDroid',
     description: romDescriptions['crDroid'],
     maintainer: 'crDroid Team',
