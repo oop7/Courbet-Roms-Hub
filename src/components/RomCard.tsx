@@ -22,6 +22,9 @@ export function RomCard({ rom }: { rom: Rom }) {
            <Image src={rom.imageUrl} alt={rom.name} fill className="object-cover" data-ai-hint={rom.imageHint} />
         </div>
         <div className="flex flex-wrap gap-2 items-center">
+          {rom.category === 'port' && (
+            <Badge variant="secondary">Port</Badge>
+          )}
           <Badge variant={latestVersion.status === 'Stable' ? 'default' : 'secondary'} className={latestVersion.status === 'Stable' ? 'bg-primary/20 text-primary border-primary/50' : 'bg-muted text-muted-foreground border-border'}>
             <ShieldCheck className="w-3 h-3 mr-1" /> {latestVersion.status}
           </Badge>
