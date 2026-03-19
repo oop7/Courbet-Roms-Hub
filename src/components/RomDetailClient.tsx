@@ -12,6 +12,7 @@ import { PreviousReleaseDetails } from '@/components/PreviousReleaseDetails';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { DownloadButton } from './DownloadButton';
 import { MobileDownloadInfo } from './MobileDownloadInfo';
+import Link from 'next/link';
 
 
 const RomVersionDetails = ({ version }: { version: RomVersion }) => {
@@ -53,6 +54,30 @@ const RomVersionDetails = ({ version }: { version: RomVersion }) => {
             {version.note}
           </AlertDescription>
         </Alert>
+      )}
+
+      {version.tips && version.tips.length > 0 && (
+        <Card className="bg-secondary/50">
+          <CardHeader>
+            <CardTitle>Tips</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-3">
+              {version.tips.map((tip, index) => (
+                <li key={index} className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-primary mr-3 mt-1 shrink-0" />
+                  {tip.url ? (
+                    <Link href={tip.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-primary transition-colors">
+                      {tip.label}
+                    </Link>
+                  ) : (
+                    <span>{tip.label}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
       )}
 
       {!isCrDroid && <MobileDownloadInfo />}
