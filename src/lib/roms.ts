@@ -224,6 +224,10 @@ for (const romName in romsByType) {
         },
       ];
     }
+
+    if (romName === 'DerpFest' && androidVersion === '16') {
+      romVersion.note = 'The recovery.img located inside the ROM zip is highly recommended to use as recovery.';
+    }
     
     // Add note for crDroid
     if (romName === 'crDroid') {
