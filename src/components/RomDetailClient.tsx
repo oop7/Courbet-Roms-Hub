@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { CheckCircle, Code, ShieldCheck, Calendar, BookOpen, Clock, KeyRound, Info } from 'lucide-react';
+import { CheckCircle, Code, ShieldCheck, Calendar, BookOpen, Clock, KeyRound, Info, User } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { Rom, RomVersion } from '@/lib/roms';
 import { PreviousReleaseDetails } from '@/components/PreviousReleaseDetails';
@@ -13,6 +13,12 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { DownloadButton } from './DownloadButton';
 import { MobileDownloadInfo } from './MobileDownloadInfo';
 import Link from 'next/link';
+
+const builderTelegramProfiles: Record<string, string> = {
+  melo159: 'https://github.com/meloalfa159',
+  Aska: 'https://t.me/smwnheree',
+  omer: 'https://t.me/omer12544',
+};
 
 
 const RomVersionDetails = ({ version }: { version: RomVersion }) => {
@@ -138,6 +144,7 @@ const RomVersionDetails = ({ version }: { version: RomVersion }) => {
 export function RomDetailClient({ rom }: { rom: Rom }) {
   const defaultTab = rom.versions[0]?.androidVersion || '';
   const numVersions = rom.versions.length;
+  const maintainerProfileUrl = builderTelegramProfiles[rom.maintainer];
 
   const gridColsMap: { [key: number]: string } = {
     1: 'grid-cols-1',
@@ -156,6 +163,22 @@ export function RomDetailClient({ rom }: { rom: Rom }) {
             {rom.name}
           </h1>
           <p className="text-lg text-muted-foreground">{rom.description}</p>
+          <p className="mt-2 inline-flex items-center gap-2 text-sm text-muted-foreground">
+            <User className="h-4 w-4" />
+            Builder:{' '}
+            {maintainerProfileUrl ? (
+              <Link
+                href={maintainerProfileUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-foreground underline underline-offset-4 hover:text-primary transition-colors"
+              >
+                {rom.maintainer}
+              </Link>
+            ) : (
+              <span className="font-medium text-foreground">{rom.maintainer}</span>
+            )}
+          </p>
         </div>
 
         <div className="relative aspect-video w-full rounded-xl overflow-hidden shadow-lg">

@@ -138,18 +138,31 @@ const getRootMethod = (buildDate: string): 'KernelSU' | 'KernelSU Next' => {
   return new Date(buildDate) < cutoffDate ? 'KernelSU' : 'KernelSU Next';
 };
 
+const getMaintainerFromAcknowledgements = (romName: string, category: 'rom' | 'port'): string => {
+  if (romName === 'DerpFest') {
+    return 'omer';
+  }
+
+  if (category === 'port') {
+    return 'Aska';
+  }
+
+  return 'melo159';
+};
+
 
 for (const romName in romsByType) {
   const allBuilds = romsByType[romName];
   const slug = romName.toLowerCase().replace(/\s/g, '-').replace('.', '');
   const bannerFileName = bannerFileNames[romName] || 'placeholder.png';
+  const category: 'rom' | 'port' = allBuilds.some(build => build.category === 'port') ? 'port' : 'rom';
   
   const rom: Rom = {
     slug: slug,
-    category: allBuilds.some(build => build.category === 'port') ? 'port' : 'rom',
+    category: category,
     name: romName,
     description: romDescriptions[romName] || `A great custom ROM for your device.`,
-    maintainer: 'melo159',
+    maintainer: getMaintainerFromAcknowledgements(romName, category),
     imageUrl: `/banners/${bannerFileName}`,
     imageHint: imageHints[slug] || 'abstract pattern',
     versions: [],
@@ -249,7 +262,7 @@ processedRoms[crDroidSlug] = {
   category: 'rom',
     name: 'crDroid',
     description: romDescriptions['crDroid'],
-    maintainer: 'crDroid Team',
+    maintainer: 'melo159',
     imageUrl: `/banners/${bannerFileNames['crDroid']}`,
     imageHint: imageHints[crDroidSlug],
     versions: [
