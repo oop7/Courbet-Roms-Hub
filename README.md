@@ -76,7 +76,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 This project would not be possible without the incredible work of the Android modding community. Special thanks to:
 
 - **[melo159](https://github.com/meloalfa159):** For tirelessly building and maintaining all the amazing custom ROMs.
-- **[EsTeh](https://t.me/BulluLandak):** For maintaining and building OxygenOS-Rev 2.
+- **[EsTeh](https://t.me/BulluLandak):** For maintaining and building OxygenOS-Rev 2 and ColorOS-Ace3.
 - **The teams behind KernelSU, TWRP, and OrangeFox.**
 - **All the ROM developers and contributors** who share their work with the community.
 
