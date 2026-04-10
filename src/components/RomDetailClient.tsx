@@ -17,6 +17,7 @@ import Link from 'next/link';
 const builderTelegramProfiles: Record<string, string> = {
   melo159: 'https://github.com/meloalfa159',
   Aska: 'https://t.me/smwnheree',
+  EsTeh: 'https://t.me/BulluLandak',
   omer: 'https://t.me/omer12544',
 };
 

@@ -58,6 +58,7 @@ const romDescriptions: Record<string, string> = {
   'HyperOS 3.0.1.0 EU': 'A debloated HyperOS 3 EU port for courbet with core features and UI experience preserved.',
   'Infinity-X': 'Infinity-X offers a unique blend of features and customizations for a personalized Android experience.',
   'LineageOS': 'A free and open-source operating system for various devices, based on the Android mobile platform. Successor to CyanogenMod.',
+  'OxygenOS-Rev 2': 'An OxygenOS-based Android 15 port for courbet with prebuilt camera support and bundled utilities.',
   'PixelOS': 'Get the pure Pixel experience on your Courbet device. Smooth, stable, and packed with Google\'s best features.',
   'RisingOS': 'RisingOS is known for its extensive feature set and customization options, allowing you to tailor your device to your liking.',
   'The Pixel Project': 'Aims to replicate the Google Pixel software experience as closely as possible on other devices.',
@@ -74,6 +75,7 @@ const imageHints: Record<string, string> = {
     'evolution-x': 'evolution x logo',
     'infinity-x': 'abstract black',
     'lineageos': 'abstract green',
+    'oxygenos-rev-2': 'oxygen abstract red',
     'pixelos': 'abstract dark blue',
     'risingos': 'abstract red',
     'risingos-revived': 'abstract red',
@@ -92,6 +94,7 @@ const bannerFileNames: Record<string, string> = {
   'HyperOS 3.0.1.0 EU': 'HyperOS_3.0.1.0 EU.webp',
   'Infinity-X': 'ProjectInfinityX.webp',
   'LineageOS': 'Lineage.webp',
+  'OxygenOS-Rev 2': 'oxygenOS_15.webp',
   'PixelOS': 'pixelos.webp',
   'RisingOS': 'RisingOS.webp',
   'RisingOS Revived': 'RisingOS_Revived.webp',
@@ -141,6 +144,10 @@ const getRootMethod = (buildDate: string): 'KernelSU' | 'KernelSU Next' => {
 const getMaintainerFromAcknowledgements = (romName: string, category: 'rom' | 'port'): string => {
   if (romName === 'DerpFest') {
     return 'omer';
+  }
+
+  if (romName === 'OxygenOS-Rev 2') {
+    return 'EsTeh';
   }
 
   if (category === 'port') {

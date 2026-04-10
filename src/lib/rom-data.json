@@ -67,6 +67,28 @@
       "download_url": "https://drive.google.com/file/d/1hLmTmSmXrTWI--7Nca9FPYvdIOUxA-Ue/view?usp=drive_link"
     },
     {
+      "file_name": "OxygenOS-Rev-2-courbet-20260228.zip",
+      "rom_type": "OxygenOS-Rev 2",
+      "category": "port",
+      "android_version": "15",
+      "version": "Rev 2",
+      "date": "2026-02-28",
+      "status": "Beta",
+      "root_method": "None",
+      "whats_new": [
+        "Initial OxygenOS build.",
+        "Working: fingerprint, Bluetooth, and wired headsets.",
+        "Spoofed.",
+        "Play Store certified by default.",
+        "Camera added by default.",
+        "Viper4X included.",
+        "KaoriOS Toolbox included.",
+        "Known bugs: face unlock (front camera unavailable on test device), NFC (insufficient odm size), and other minor issues.",
+        "For detailed ROM changelog, visit their own groups or site."
+      ],
+      "download_url": "https://drive.google.com/file/d/1rYI-IPCUqpd6CFcS8OMrpMjVD5vweBUg/view"
+    },
+    {
       "file_name": "lineage-23.1-20260110-UNOFFICIAL-courbet.zip",
       "rom_type": "LineageOS",
       "android_version": "16",
