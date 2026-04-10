@@ -89,6 +89,28 @@
       "download_url": "https://drive.google.com/file/d/1rYI-IPCUqpd6CFcS8OMrpMjVD5vweBUg/view"
     },
     {
+      "file_name": "ColorOS-Ace3-courbet-20260214.zip",
+      "rom_type": "ColorOS-Ace3",
+      "category": "port",
+      "android_version": "15",
+      "version": "Ace3",
+      "date": "2026-02-14",
+      "status": "Beta",
+      "root_method": "None",
+      "whats_new": [
+        "Initial ColorOS build.",
+        "Working: fingerprint, Bluetooth, wired headsets, and core functions.",
+        "Spoofed.",
+        "AOD support (if issues appear, this may be device-specific).",
+        "Privacy features: app lock, hide apps, and private space.",
+        "Viper4X included.",
+        "NFC support (may not function on some devices).",
+        "Play Store certified by default.",
+        "For detailed ROM changelog, visit their own groups or site."
+      ],
+      "download_url": "https://drive.google.com/file/d/1bLsUtBegjgdBTAM6gB9bMAufu-grKGbR/view"
+    },
+    {
       "file_name": "lineage-23.1-20260110-UNOFFICIAL-courbet.zip",
       "rom_type": "LineageOS",
       "android_version": "16",

@@ -51,6 +51,7 @@ export interface Rom {
 const romDescriptions: Record<string, string> = {
   'AlphaDroid': 'A lightweight and performance-focused ROM, aiming to provide a smooth experience with essential customizations.',
   'AxionOS': 'AxionOS focuses on minimalism and stability, delivering a clean AOSP experience with useful additions.',
+  'ColorOS-Ace3': 'A ColorOS-based Android 15 port for courbet focused on daily usability and bundled privacy features.',
   'ColorOS 15 Lite': 'A lightweight ColorOS-based port for courbet focused on daily usability and core hardware support.',
   'DerpFest': 'DerpFest delivers a feature-rich Android experience with performance and customization focused updates.',
   'EvolutionX': 'A flashable custom ROM to bring a true Pixel feel to your Android Device, with many additional configurations at your disposal.',
@@ -70,6 +71,7 @@ const romDescriptions: Record<string, string> = {
 const imageHints: Record<string, string> = {
     'alphadroid': 'abstract orange',
     'axionos': 'abstract purple',
+  'coloros-ace3': 'coloros abstract green',
   'coloros-15-lite': 'coloros abstract teal',
     'derpfest': 'abstract teal purple',
     'evolution-x': 'evolution x logo',
@@ -87,6 +89,7 @@ const imageHints: Record<string, string> = {
 const bannerFileNames: Record<string, string> = {
   'AlphaDroid': 'alpha.webp',
   'AxionOS': 'AXION.webp',
+  'ColorOS-Ace3': 'ColorOS_15.webp',
   'ColorOS 15 Lite': 'colorOS_lite.webp',
   'DerpFest': 'DerpFest.webp',
   'EvolutionX': 'evolution_x.webp',
@@ -146,7 +149,7 @@ const getMaintainerFromAcknowledgements = (romName: string, category: 'rom' | 'p
     return 'omer';
   }
 
-  if (romName === 'OxygenOS-Rev 2') {
+  if (romName === 'OxygenOS-Rev 2' || romName === 'ColorOS-Ace3') {
     return 'EsTeh';
   }
 
@@ -247,6 +250,10 @@ for (const romName in romsByType) {
 
     if (romName === 'DerpFest' && androidVersion === '16') {
       romVersion.note = 'The recovery.img located inside the ROM zip is highly recommended to use as recovery.';
+    }
+
+    if (romName === 'ColorOS-Ace3' && androidVersion === '15') {
+      romVersion.note = 'LET THE ROM SETTLE. Since this is Oplus-based, it usually takes around 1 to 3 days for the experience to fully stabilize.';
     }
     
     // Add note for crDroid
