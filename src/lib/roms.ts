@@ -249,7 +249,13 @@ for (const romName in romsByType) {
     }
 
     if (romName === 'DerpFest' && androidVersion === '16') {
-      romVersion.note = 'The recovery.img located inside the ROM zip is highly recommended to use as recovery.';
+      romVersion.note = 'The recovery.img located inside the ROM zip is highly recommended to use as recovery. Read the flashing guide before flashing.';
+      romVersion.tips = [
+        {
+          label: 'Open the DerpFest flashing guide',
+          url: '/flashing-guide/derpfest',
+        },
+      ];
     }
 
     if (romName === 'ColorOS-Ace3' && androidVersion === '15') {
