@@ -1,7 +1,8 @@
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BookOpen, HardDrive, ShieldCheck, Trash2, AlertTriangle } from 'lucide-react';
+import { BookOpen, HardDrive, ShieldCheck, Trash2, AlertTriangle, Fingerprint } from 'lucide-react';
 import { CodeBlock } from '@/components/CodeBlock';
+import Link from 'next/link';
 
 const Step = ({ num, title, children }: { num: string | number; title: string; children: React.ReactNode }) => (
   <div className="flex flex-col gap-3 rounded-xl border border-border/60 bg-background/40 p-5 md:flex-row md:gap-4">
@@ -114,6 +115,20 @@ export default function DerpFestFlashingGuidePage() {
             <p>It is recommended to format cache if you are dirty flashing from a previous build.</p>
             <p>Do not format data for a dirty flash.</p>
           </Step>
+        </SectionCard>
+
+        <SectionCard title="Tips" icon={<BookOpen className="h-6 w-6 text-accent" />}>
+          <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+            <li>You'd better use only natural color mode and disable blur effects.</li>
+            <li>Format cache when you make dirty flash.</li>
+            <li>You'd better flash the recovery.img that is located inside of .zip file.</li>
+          </ul>
+        </SectionCard>
+
+        <SectionCard title="Rooting" icon={<Fingerprint className="h-6 w-6 text-accent" />}>
+          <p className="text-muted-foreground">
+            If you want to root your DerpFest installation, this ROM supports the APatch root method. Check out our detailed step-by-step instructions in the <Link href="/root-guide" className="text-primary hover:underline">Root Guide</Link>.
+          </p>
         </SectionCard>
       </div>
     </div>

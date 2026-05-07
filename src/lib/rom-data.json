@@ -4,6 +4,26 @@
 {
   "roms": [
     {
+      "file_name": "DerpFest-16.2-courbet-20260506.zip",
+      "rom_type": "DerpFest",
+      "android_version": "16",
+      "version": "16.2",
+      "date": "2026-05-06",
+      "status": "Stable",
+      "root_method": "None",
+      "whats_new": [
+        "Statusbar overlay is checked out from miui",
+        "Display dts updated with 14.0.4 global",
+        "Miuicamera included",
+        "Common trees and kernel source are rebased with LOS repos",
+        "Device tree is improved little",
+        "Switched back to AOSP powerhal from QTI powerhal",
+        "Live display is enabled again(without dc dimming option)",
+        "For detailed rom changelog visit their own groups or site"
+      ],
+      "download_url": "https://drive.google.com/file/d/1E5l65wJbvJ8DAhex44LHs4cPkDmLfLXH/view?usp=sharing"
+    },
+    {
       "file_name": "DerpFest-16.2-courbet-20260412.zip",
       "rom_type": "DerpFest",
       "android_version": "16",
