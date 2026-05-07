@@ -11,7 +11,7 @@ interface RomBuild {
   download_url: string;
   status: 'Stable' | 'Beta';
   category?: 'rom' | 'port';
-  root_method?: 'KernelSU' | 'KernelSU Next' | 'None';
+  root_method?: 'KernelSU' | 'KernelSU Next' | 'None' | 'APatch';
   whats_new: string[];
 }
 
@@ -19,7 +19,7 @@ export interface PreviousRelease {
   version: string;
   date: string;
   downloadLink: string;
-  rootMethod: 'KernelSU' | 'KernelSU Next' | 'None';
+  rootMethod: 'KernelSU' | 'KernelSU Next' | 'None' | 'APatch';
   whatsNew: string[];
   status: 'Stable' | 'Beta';
 }
@@ -31,7 +31,7 @@ export interface RomVersion {
   whatsNew: string[];
   tips?: { label: string; url?: string }[];
   lastUpdated: string;
-  rootMethod: 'KernelSU' | 'KernelSU Next' | 'None';
+  rootMethod: 'KernelSU' | 'KernelSU Next' | 'None' | 'APatch';
   previousReleases?: PreviousRelease[];
   note?: string;
 }
@@ -249,11 +249,24 @@ for (const romName in romsByType) {
     }
 
     if (romName === 'DerpFest' && androidVersion === '16') {
-      romVersion.note = 'The recovery.img located inside the ROM zip is highly recommended to use as recovery. Read the flashing guide before flashing.';
+      romVersion.note = 'The ROM is not rooted by default. The recovery.img located inside the ROM zip is highly recommended to use as recovery. Read the flashing guide before flashing.';
       romVersion.tips = [
         {
           label: 'Open the DerpFest flashing guide',
           url: '/flashing-guide/derpfest',
+        },
+        {
+          label: "You'd better use only natural color mode and disable blur effects."
+        },
+        {
+          label: 'Format cache when you make dirty flash.'
+        },
+        {
+          label: "You'd better flash the recovery.img that is located inside of .zip file."
+        },
+        {
+          label: 'APatch works as a root solution for this ROM. Here is the step-by-step guide.',
+          url: '/root-guide',
         },
       ];
     }
