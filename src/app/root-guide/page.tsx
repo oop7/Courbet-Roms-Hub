@@ -168,7 +168,7 @@ export default function RootGuidePage() {
                   <li>Open the <strong>APatch Manager</strong> app.</li>
                   <li>Tap the <strong>Patch</strong> button (usually top right) → <strong>Select a boot image to patch</strong>.</li>
                   <li>Choose your extracted <code>boot.img</code>.</li>
-                  <li>Set a strong <strong>SuperKey</strong> (8–63 characters, mix of numbers + letters — <strong>no special characters</strong>). Save this key securely — it's more powerful than root.</li>
+                  <li>Set a strong <strong>SuperKey</strong> (8–63 characters, mix of numbers + letters — <strong>no special characters</strong>). Save this key securely</li>
                   <li>Tap <strong>Start</strong> and wait for patching to complete.</li>
                   <li>The patched image (e.g., <code>apatch_patched_....img</code>) will be saved (usually in Downloads).</li>
                 </ol>
@@ -184,16 +184,13 @@ export default function RootGuidePage() {
                   <li>Flash it: <CodeBlock command="fastboot flash boot patched_boot.img" /> (Rename the file to <code>boot.img</code> if needed.)</li>
                   <li>Reboot: <CodeBlock command="fastboot reboot" /></li>
                 </ol>
-                <p className="mt-4"><strong>Test first</strong> (if your device supports it):</p>
-                <CodeBlock command="fastboot boot patched_boot.img" />
-                <p>This boots temporarily without flashing.</p>
-                <p><strong>Alternative:</strong> Some versions support flashing via TWRP (rename APK to .zip).</p>
               </div>
 
               <div className="space-y-2">
                 <h3 className="text-xl font-semibold text-foreground">Step 6: Verify Root</h3>
                 <ul className="list-disc list-inside space-y-1">
-                  <li>Open APatch Manager — it should show as installed/active.</li>
+                  <li>Open Apatch Manager enter your SuperKey.</li>
+                  <li>It should show as installed/active.</li>
                   <li>Use a root checker app or run <code>su</code> in a terminal.</li>
                 </ul>
               </div>
