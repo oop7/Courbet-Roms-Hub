@@ -147,7 +147,7 @@ export default function RootGuidePage() {
               <div className="space-y-2">
                 <h3 className="text-xl font-semibold text-foreground">Step 2: Extract the Correct boot.img</h3>
                 <ol className="list-decimal list-inside space-y-1">
-                  <li>Download your device's <strong>full stock firmware</strong> (matching your current Android version and build).</li>
+                  <li>Download your device's <strong>ROM</strong></li>
                   <li>Extract the <code>boot.img</code></li>
                   <li>Copy the <code>boot.img</code> to your phone's internal storage (e.g., Downloads folder).</li>
                 </ol>
