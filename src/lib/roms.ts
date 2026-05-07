@@ -259,9 +259,6 @@ for (const romName in romsByType) {
           label: "You'd better use only natural color mode and disable blur effects."
         },
         {
-          label: 'Format cache when you make dirty flash.'
-        },
-        {
           label: "You'd better flash the recovery.img that is located inside of .zip file."
         },
         {
