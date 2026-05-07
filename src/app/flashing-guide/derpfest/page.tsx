@@ -110,7 +110,7 @@ export default function DerpFestFlashingGuidePage() {
           </Step>
 
           <Step num="9" title="Wipe cache only">
-            <p>After flashing, go to Wipe → format cache partition.</p>
+            <p>After flashing, go to Factory Reset → format cache partition.</p>
             <p>It is recommended to format cache if you are dirty flashing from a previous build.</p>
             <p>Do not format data for a dirty flash.</p>
           </Step>
