@@ -60,14 +60,15 @@ export default function AboutPage() {
         </Card>
       </div>
       
-      <Card className="max-w-4xl mx-auto mt-8 bg-secondary/50">
+      <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto mt-8">
+        <Card className="bg-secondary/50">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-2xl">
               <Send className="h-6 w-6 text-accent" />
-              Join the Community
+              Melo's Community
             </CardTitle>
           </CardHeader>
-          <CardContent className="flex flex-col sm:flex-row gap-4">
+          <CardContent className="flex flex-col gap-4">
             <Button asChild className="w-full" variant="outline">
                <a href="https://t.me/meloalfa159roms" target="_blank" rel="noopener noreferrer">
                   <Send className="mr-2 h-4 w-4" /> ROM Releases Channel
@@ -80,6 +81,28 @@ export default function AboutPage() {
             </Button>
           </CardContent>
         </Card>
+
+        <Card className="bg-secondary/50">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-2xl">
+              <Send className="h-6 w-6 text-accent" />
+              DerpFest Community
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-col gap-4">
+            <Button asChild className="w-full" variant="outline">
+               <a href="https://t.me/zjdwkdocall2mekdoskwm" target="_blank" rel="noopener noreferrer">
+                  <Send className="mr-2 h-4 w-4" /> DerpFest Channel
+                </a>
+            </Button>
+            <Button asChild className="w-full" variant="outline">
+                <a href="https://t.me/jdjfuiwwjsjdjx" target="_blank" rel="noopener noreferrer">
+                  <Users className="mr-2 h-4 w-4" /> DerpFest Chat
+                </a>
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
 
       <div className="text-center mt-16">
         <h2 className="text-2xl font-bold mb-4">Want to contribute?</h2>
