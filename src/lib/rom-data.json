@@ -4,6 +4,21 @@
 {
   "roms": [
     {
+      "file_name": "DerpFest-16.2-courbet-20260508.zip",
+      "rom_type": "DerpFest",
+      "android_version": "16",
+      "version": "16.2",
+      "date": "2026-05-08",
+      "status": "Stable",
+      "root_method": "None",
+      "whats_new": [
+        "90hz problem that I create is fixed",
+        "Vsync props are updated so that less/no stutters should happen at 60hz",
+        "For detailed rom changelog visit their own groups or site"
+      ],
+      "download_url": "https://drive.google.com/file/d/1DK83_yILWAKHvQhVAZF6TBLEdYZaXq2a/view?usp=drive_link"
+    },
+    {
       "file_name": "DerpFest-16.2-courbet-20260506.zip",
       "rom_type": "DerpFest",
       "android_version": "16",
