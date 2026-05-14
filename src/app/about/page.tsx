@@ -51,7 +51,7 @@ export default function AboutPage() {
               <li><a href="https://t.me/smwnheree" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"><strong>Aska</strong></a>, the maintainer and builder of ports.</li>
               <li><a href="https://t.me/BulluLandak" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"><strong>EsTeh</strong></a>, the maintainer and builder of OxygenOS-Rev 2 and ColorOS-Ace3.</li>
               <li><a href="https://t.me/omer12544" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"><strong>ömer</strong></a>, the maintainer and builder of DerpFest.</li>
-              <li>The teams behind KernelSU, KernelSU Next, TWRP, and OrangeFox.</li>
+              <li>The teams behind KernelSU, KernelSU Next, TWRP, and OrangeFox, and Apatch.</li>
               <li>Teplaothis, for providing valuable testing and feedback.</li>
               <li>PixelOS devs, aryan and other devs for the trees and the kernel</li>
               <li>pratikkabra143 for keeping KSU-N updated</li>
@@ -69,12 +69,12 @@ export default function AboutPage() {
           </CardHeader>
           <CardContent className="flex flex-col sm:flex-row gap-4">
             <Button asChild className="w-full" variant="outline">
-               <a href="https.t.me/melo159roms" target="_blank" rel="noopener noreferrer">
+               <a href="https://t.me/melo159roms" target="_blank" rel="noopener noreferrer">
                   <Send className="mr-2 h-4 w-4" /> ROM Releases Channel
                 </a>
             </Button>
             <Button asChild className="w-full" variant="outline">
-                <a href="https.t.me/melo159chat" target="_blank" rel="noopener noreferrer">
+                <a href="https://t.me/melo159chat" target="_blank" rel="noopener noreferrer">
                   <Users className="mr-2 h-4 w-4" /> Discussion Channel
                 </a>
             </Button>
