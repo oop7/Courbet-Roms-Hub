@@ -45,6 +45,7 @@ export interface Rom {
   imageUrl: string;
   imageHint: string;
   versions: RomVersion[];
+  isActive?: boolean;
 }
 
 
@@ -176,6 +177,7 @@ for (const romName in romsByType) {
     imageUrl: `/banners/${bannerFileName}`,
     imageHint: imageHints[slug] || 'abstract pattern',
     versions: [],
+    isActive: romName === 'DerpFest',
   };
 
   // Group by android_version within each rom_type

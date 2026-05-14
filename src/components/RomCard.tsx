@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import type { Rom } from '@/lib/roms';
-import { ArrowRight, Calendar, Code, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Calendar, Code, ShieldCheck, Activity } from 'lucide-react';
 
 export function RomCard({ rom }: { rom: Rom }) {
   // Get the latest version to display on the card
@@ -22,6 +22,11 @@ export function RomCard({ rom }: { rom: Rom }) {
            <Image src={rom.imageUrl} alt={rom.name} fill className="object-cover" data-ai-hint={rom.imageHint} />
         </div>
         <div className="flex flex-wrap gap-2 items-center">
+          {rom.isActive && (
+            <Badge variant="default" className="bg-green-500/10 text-green-500 border-green-500/20 hover:bg-green-500/20">
+              <Activity className="w-3 h-3 mr-1" /> Active
+            </Badge>
+          )}
           {rom.category === 'port' && (
             <Badge variant="secondary">Port</Badge>
           )}
