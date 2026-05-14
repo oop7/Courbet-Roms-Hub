@@ -52,9 +52,7 @@ export default function AboutPage() {
               <li><a href="https://t.me/BulluLandak" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"><strong>EsTeh</strong></a>, the maintainer and builder of OxygenOS-Rev 2 and ColorOS-Ace3.</li>
               <li><a href="https://t.me/omer12544" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"><strong>ömer</strong></a>, the maintainer and builder of DerpFest.</li>
               <li>The teams behind KernelSU, KernelSU Next, TWRP, and OrangeFox, and Apatch.</li>
-              <li>Teplaothis, for providing valuable testing and feedback.</li>
               <li>PixelOS devs, aryan and other devs for the trees and the kernel</li>
-              <li>pratikkabra143 for keeping KSU-N updated</li>
             </ul>
           </CardContent>
         </Card>
