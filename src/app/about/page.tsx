@@ -30,7 +30,7 @@ export default function AboutPage() {
           </CardHeader>
           <CardContent className="text-muted-foreground">
             <p>
-              Courbet ROMs Hub was created out of a passion for customizing the Xiaomi Mi 11 Lite 4G (courbet). This site, developed by <a href="https://github.com/oop7" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">oop7</a>, aims to provide a centralized, reliable resource for enthusiasts to find the best custom ROMs built by melo159, alongside up-to-date guides and support. We believe in the power of community to push the boundaries of our devices.
+              Courbet ROMs Hub was created out of a passion for customizing the Xiaomi Mi 11 Lite 4G (courbet). This site, developed by <a href="https://github.com/oop7" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">oop7</a>, aims to provide a centralized, reliable resource for enthusiasts to find the best custom ROMs, alongside up-to-date guides and support. We believe in the power of community to push the boundaries of our devices.
             </p>
           </CardContent>
         </Card>
