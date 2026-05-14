@@ -69,12 +69,12 @@ export default function AboutPage() {
           </CardHeader>
           <CardContent className="flex flex-col sm:flex-row gap-4">
             <Button asChild className="w-full" variant="outline">
-               <a href="https://t.me/melo159roms" target="_blank" rel="noopener noreferrer">
+               <a href="https://t.me/meloalfa159roms" target="_blank" rel="noopener noreferrer">
                   <Send className="mr-2 h-4 w-4" /> ROM Releases Channel
                 </a>
             </Button>
             <Button asChild className="w-full" variant="outline">
-                <a href="https://t.me/melo159chat" target="_blank" rel="noopener noreferrer">
+                <a href="https://t.me/meloalfa159chat" target="_blank" rel="noopener noreferrer">
                   <Users className="mr-2 h-4 w-4" /> Discussion Channel
                 </a>
             </Button>
