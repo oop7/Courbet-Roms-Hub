@@ -209,7 +209,7 @@ export default function RootGuidePage() {
                   <li>Modules not loading → Try older APatch/KernelPatch version.</li>
                   <li>Patching errors → Ensure exact matching boot.img and strong SuperKey.</li>
                 </ul>
-                <p className="mt-4 break-words">Official docs: <a href="https://apatch.dev/install.html" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://apatch.dev/install.html</a></p>
+                <p className="mt-4 break-words">Official docs: <a href="https://apatch.dev/install.html" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">apatch.dev/install.html</a></p>
               </div>
             </div>
           </CardContent>
