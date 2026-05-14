@@ -156,7 +156,7 @@ export default function RootGuidePage() {
               <div className="space-y-2">
                 <h3 className="text-xl font-semibold text-foreground">Step 3: Install APatch Manager</h3>
                 <ol className="list-decimal list-inside space-y-1">
-                  <li>Go to the official GitHub: <a href="https://github.com/bmax121/APatch/releases" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://github.com/bmax121/APatch/releases</a></li>
+                  <li>Go to the official GitHub: <a href="https://github.com/bmax121/APatch/releases" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">APatch Releases</a></li>
                   <li>Download the latest <strong>APatch Manager APK</strong>.</li>
                   <li>Install it (enable "Install from unknown sources" if needed). Do <strong>not</strong> install from untrusted sources.</li>
                 </ol>
