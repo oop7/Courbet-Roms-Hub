@@ -214,6 +214,73 @@ export default function RootGuidePage() {
             </div>
           </CardContent>
         </Card>
+
+        <Card className="bg-secondary/50">
+          <CardHeader>
+            <CardTitle className="text-2xl">Magisk Alpha Root Guide</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <Alert className="mb-4 bg-primary/10 border-primary/30 text-primary-foreground">
+              <AlertTriangle className="h-4 w-4 text-primary" />
+              <AlertTitle className="text-primary font-bold">Important Notes</AlertTitle>
+              <AlertDescription className="mt-2 space-y-2">
+                <ul className="list-disc list-inside">
+                  <li><strong>Risks:</strong> Rooting can cause bootloops. Proceed at your own risk.</li>
+                  <li><strong>Backup:</strong> Always back up your original <code>boot.img</code> before proceeding.</li>
+                  <li><strong>Source:</strong> Ensure you download Magisk Alpha from their <a href="https://t.me/magiskalpha" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">official Telegram channel</a> or trusted sources.</li>
+                </ul>
+              </AlertDescription>
+            </Alert>
+            
+            <div className="space-y-6 text-muted-foreground">
+              <div className="space-y-2">
+                <h3 className="text-xl font-semibold text-foreground">Step 1: Extract the Correct boot.img</h3>
+                <ol className="list-decimal list-inside space-y-1">
+                  <li>Extract the <code>boot.img</code> from the ROM zip you are currently using.</li>
+                  <li>Copy the <code>boot.img</code> to your phone's internal storage (e.g., Downloads folder).</li>
+                </ol>
+              </div>
+
+              <div className="space-y-2">
+                <h3 className="text-xl font-semibold text-foreground">Step 2: Install Magisk Alpha App</h3>
+                <ol className="list-decimal list-inside space-y-1">
+                  <li>Download the latest <strong>Magisk Alpha APK</strong> from their <a href="https://t.me/magiskalpha" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">official Telegram channel</a>.</li>
+                  <li>Install the APK on your device (enable "Install from unknown sources" if needed).</li>
+                </ol>
+              </div>
+
+              <div className="space-y-2">
+                <h3 className="text-xl font-semibold text-foreground">Step 3: Patch the boot.img</h3>
+                <ol className="list-decimal list-inside space-y-1">
+                  <li>Open the <strong>Magisk Alpha</strong> app.</li>
+                  <li>Tap <strong>Install</strong> next to Magisk.</li>
+                  <li>Choose <strong>Select and Patch a File</strong>.</li>
+                  <li>Select the extracted <code>boot.img</code> from your storage.</li>
+                  <li>Wait for the patching process to complete. The patched file will be saved in your Downloads folder (usually named <code>magisk_patched_...img</code>).</li>
+                </ol>
+              </div>
+
+              <div className="space-y-2">
+                <h3 className="text-xl font-semibold text-foreground">Step 4: Flash the Patched Image</h3>
+                <ol className="list-decimal list-inside space-y-1">
+                  <li>Connect your phone to your PC and copy the patched boot image to your computer.</li>
+                  <li>Reboot your device to bootloader (Fastboot mode): <CodeBlock command="adb reboot bootloader" /></li>
+                  <li>Flash the patched boot image: <CodeBlock command="fastboot flash boot magisk_patched_boot.img" /> (Make sure to match the exact filename).</li>
+                  <li>Reboot your device: <CodeBlock command="fastboot reboot" /></li>
+                </ol>
+              </div>
+
+              <div className="space-y-2">
+                <h3 className="text-xl font-semibold text-foreground">Step 5: Verify Root</h3>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Open the Magisk Alpha app. It should now show that Magisk is installed.</li>
+                  <li>If prompted with "Requires Additional Setup", proceed and let the device reboot.</li>
+                  <li>Use a root checker app or run <code>su</code> in a terminal to confirm root access.</li>
+                </ul>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
