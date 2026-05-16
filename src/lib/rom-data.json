@@ -4,6 +4,21 @@
 {
   "roms": [
     {
+      "file_name": "DerpFest-16.2-courbet-20260515.zip",
+      "rom_type": "DerpFest",
+      "android_version": "16",
+      "version": "16.2",
+      "date": "2026-05-15",
+      "status": "Stable",
+      "root_method": "None",
+      "whats_new": [
+        "May ASB",
+        "Little improvements",
+        "For detailed rom changelog visit their own groups or site"
+      ],
+      "download_url": "https://drive.google.com/file/d/1r7nevxUFSTuiUMUNlPlB5NWUj09Mt1m8/view?usp=sharing"
+    },
+    {
       "file_name": "DerpFest-16.2-courbet-20260508.zip",
       "rom_type": "DerpFest",
       "android_version": "16",
