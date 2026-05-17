@@ -264,7 +264,7 @@ for (const romName in romsByType) {
           label: "You'd better flash the recovery.img that is located inside of .zip file."
         },
         {
-          label: 'APatch works as a root solution for this ROM. Here is the step-by-step guide.',
+          label: 'APatch & Magisk alpha are available as root solutions for this ROM. Here is the step-by-step guide.',
           url: '/root-guide',
         },
       ];
