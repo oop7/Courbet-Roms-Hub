@@ -14,7 +14,7 @@ import { DownloadButton } from './DownloadButton';
 import { MobileDownloadInfo } from './MobileDownloadInfo';
 import Link from 'next/link';
 
-const builderTelegramProfiles: Record<string, string> = {
+const maintainerTelegramProfiles: Record<string, string> = {
   melo159: 'https://github.com/meloalfa159',
   Aska: 'https://t.me/smwnheree',
   EsTeh: 'https://t.me/BulluLandak',
@@ -145,7 +145,7 @@ const RomVersionDetails = ({ version }: { version: RomVersion }) => {
 export function RomDetailClient({ rom }: { rom: Rom }) {
   const defaultTab = rom.versions[0]?.androidVersion || '';
   const numVersions = rom.versions.length;
-  const maintainerProfileUrl = builderTelegramProfiles[rom.maintainer];
+  const maintainerProfileUrl = maintainerTelegramProfiles[rom.maintainer];
 
   const gridColsMap: { [key: number]: string } = {
     1: 'grid-cols-1',
@@ -166,7 +166,7 @@ export function RomDetailClient({ rom }: { rom: Rom }) {
           <p className="text-lg text-muted-foreground">{rom.description}</p>
           <p className="mt-2 inline-flex items-center gap-2 text-sm text-muted-foreground">
             <User className="h-4 w-4" />
-            Builder:{' '}
+            Maintainer:{' '}
             {maintainerProfileUrl ? (
               <Link
                 href={maintainerProfileUrl}
