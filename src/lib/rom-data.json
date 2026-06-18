@@ -4,6 +4,25 @@
 {
   "roms": [
     {
+      "file_name": "lineage-23.2-20260616-UNOFFICIAL-omer-courbet.zip",
+      "rom_type": "LineageOS (Omer)",
+      "android_version": "16",
+      "version": "23.2 release 2",
+      "date": "2026-06-16",
+      "status": "Stable",
+      "root_method": "None",
+      "whats_new": [
+        "This is vanilla build meaning that gapps should be flashed separately",
+        "XiaomiParts are checked-out from pixelos' sm6150-common",
+        "Anti flicker now works",
+        "There is no face unlock option for now.",
+        "There is still miui camera, I will make a module and provide it optionally, detaching from base build.",
+        "Other minor things",
+        "For detailed rom changelog visit their own groups or site"
+      ],
+      "download_url": "https://drive.google.com/file/d/1r5GVgr2gbdGWuHv-ACk9VTgBWGlTNUjk/view?usp=sharing"
+    },
+    {
       "file_name": "DerpFest-16.2-courbet-20260515.zip",
       "rom_type": "DerpFest",
       "android_version": "16",

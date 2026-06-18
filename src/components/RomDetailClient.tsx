@@ -183,7 +183,15 @@ export function RomDetailClient({ rom }: { rom: Rom }) {
         </div>
 
         <div className="relative aspect-video w-full rounded-xl overflow-hidden shadow-lg">
-          <Image src={rom.imageUrl} alt={rom.name} fill className="object-cover" data-ai-hint={rom.imageHint} />
+          <Image
+            src={rom.imageUrl}
+            alt={rom.name}
+            fill
+            priority
+            sizes="(max-width: 1024px) 100vw, 896px"
+            className="object-cover"
+            data-ai-hint={rom.imageHint}
+          />
         </div>
         
         <Tabs defaultValue={defaultTab} className="w-full">

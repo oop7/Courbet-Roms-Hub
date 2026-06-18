@@ -19,7 +19,14 @@ export function RomCard({ rom }: { rom: Rom }) {
       </CardHeader>
       <CardContent className="flex-grow space-y-4">
         <div className="relative aspect-video w-full rounded-lg overflow-hidden">
-           <Image src={rom.imageUrl} alt={rom.name} fill className="object-cover" data-ai-hint={rom.imageHint} />
+           <Image
+             src={rom.imageUrl}
+             alt={rom.name}
+             fill
+             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+             className="object-cover"
+             data-ai-hint={rom.imageHint}
+           />
         </div>
         <div className="flex flex-wrap gap-2 items-center">
           {rom.isActive && (

@@ -60,6 +60,7 @@ const romDescriptions: Record<string, string> = {
   'HyperOS 3.0.1.0 EU': 'A debloated HyperOS 3 EU port for courbet with core features and UI experience preserved.',
   'Infinity-X': 'Infinity-X offers a unique blend of features and customizations for a personalized Android experience.',
   'LineageOS': 'A free and open-source operating system for various devices, based on the Android mobile platform. Successor to CyanogenMod.',
+  'LineageOS (Omer)': 'A free and open-source operating system for various devices, based on the Android mobile platform. Successor to CyanogenMod. Unofficial build by omer.',
   'OxygenOS-Rev 2': 'An OxygenOS-based Android 15 port for courbet with prebuilt camera support and bundled utilities.',
   'PixelOS': 'Get the pure Pixel experience on your Courbet device. Smooth, stable, and packed with Google\'s best features.',
   'RisingOS': 'RisingOS is known for its extensive feature set and customization options, allowing you to tailor your device to your liking.',
@@ -78,6 +79,7 @@ const imageHints: Record<string, string> = {
     'evolution-x': 'evolution x logo',
     'infinity-x': 'abstract black',
     'lineageos': 'abstract green',
+    'lineageos-omer': 'abstract green',
     'oxygenos-rev-2': 'oxygen abstract red',
     'pixelos': 'abstract dark blue',
     'risingos': 'abstract red',
@@ -98,6 +100,7 @@ const bannerFileNames: Record<string, string> = {
   'HyperOS 3.0.1.0 EU': 'HyperOS_3.0.1.0 EU.webp',
   'Infinity-X': 'ProjectInfinityX.webp',
   'LineageOS': 'Lineage.webp',
+  'LineageOS (Omer)': 'Lineage.webp',
   'OxygenOS-Rev 2': 'oxygenOS_15.webp',
   'PixelOS': 'pixelos.webp',
   'RisingOS': 'RisingOS.webp',
@@ -146,7 +149,7 @@ const getRootMethod = (buildDate: string): 'KernelSU' | 'KernelSU Next' => {
 };
 
 const getMaintainerFromAcknowledgements = (romName: string, category: 'rom' | 'port'): string => {
-  if (romName === 'DerpFest') {
+  if (romName === 'DerpFest' || romName === 'LineageOS (Omer)') {
     return 'omer';
   }
 
@@ -164,7 +167,7 @@ const getMaintainerFromAcknowledgements = (romName: string, category: 'rom' | 'p
 
 for (const romName in romsByType) {
   const allBuilds = romsByType[romName];
-  const slug = romName.toLowerCase().replace(/\s/g, '-').replace('.', '');
+  const slug = romName.toLowerCase().replace(/\s/g, '-').replace(/[().]/g, '');
   const bannerFileName = bannerFileNames[romName] || 'placeholder.png';
   const category: 'rom' | 'port' = allBuilds.some(build => build.category === 'port') ? 'port' : 'rom';
   
@@ -177,7 +180,7 @@ for (const romName in romsByType) {
     imageUrl: `/banners/${bannerFileName}`,
     imageHint: imageHints[slug] || 'abstract pattern',
     versions: [],
-    isActive: romName === 'DerpFest',
+    isActive: romName === 'DerpFest' || romName === 'LineageOS (Omer)',
   };
 
   // Group by android_version within each rom_type
@@ -266,6 +269,20 @@ for (const romName in romsByType) {
         {
           label: 'APatch & Magisk alpha are available as root solutions for this ROM. Here is the step-by-step guide.',
           url: '/root-guide',
+        },
+      ];
+    }
+
+    if (romName === 'LineageOS (Omer)' && androidVersion === '16') {
+      romVersion.note = 'This ROM is vanilla (no GApps) and non-rooted by default. GApps must be flashed immediately after the ROM without rebooting. KernelSU-Next is supported by flashing a custom boot image.';
+      romVersion.tips = [
+        {
+          label: 'Open the LineageOS (Omer) flashing guide',
+          url: '/flashing-guide/lineageos',
+        },
+        {
+          label: 'Open the LineageOS (Omer) rooting guide',
+          url: '/root-guide/lineageos',
         },
       ];
     }

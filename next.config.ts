@@ -12,6 +12,12 @@ const ContentSecurityPolicy = `
 
 const nextConfig: NextConfig = {
   /* config options here */
+  experimental: {
+    // @ts-ignore - Turbopack root config is valid in Next.js but may not be present in local typings
+    turbopack: {
+      root: '.',
+    },
+  },
   typescript: {
     ignoreBuildErrors: true,
   },
