@@ -50,7 +50,7 @@ export default function AboutPage() {
               <li><a href="https://github.com/meloalfa159" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"><strong>melo159</strong></a>, for tirelessly maintaining all the custom ROMs featured here.</li>
               <li><a href="https://t.me/smwnheree" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"><strong>Aska</strong></a>, the maintainer of ports.</li>
               <li><a href="https://t.me/BulluLandak" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"><strong>EsTeh</strong></a>, the maintainer of OxygenOS-Rev 2 and ColorOS-Ace3.</li>
-              <li><a href="https://t.me/omer12544" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"><strong>ömer</strong></a>, the maintainer of DerpFest.</li>
+              <li><a href="https://t.me/omer12544" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"><strong>ömer</strong></a>, the maintainer of DerpFest & LineageOS.</li>
               <li>The teams behind KernelSU, KernelSU Next, TWRP, and OrangeFox, Magisk and Apatch.</li>
               <li>PixelOS devs, aryan and other devs for the trees and the kernel</li>
             </ul>
