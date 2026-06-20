@@ -84,18 +84,18 @@ export default function AboutPage() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-2xl">
               <Send className="h-6 w-6 text-accent" />
-              DerpFest Community
+              Omer's Community
             </CardTitle>
           </CardHeader>
           <CardContent className="flex flex-col gap-4">
             <Button asChild className="w-full" variant="outline">
                <a href="https://t.me/zjdwkdocall2mekdoskwm" target="_blank" rel="noopener noreferrer">
-                  <Send className="mr-2 h-4 w-4" /> DerpFest Channel
+                  <Send className="mr-2 h-4 w-4" /> Releases Channel
                 </a>
             </Button>
             <Button asChild className="w-full" variant="outline">
                 <a href="https://t.me/jdjfuiwwjsjdjx" target="_blank" rel="noopener noreferrer">
-                  <Users className="mr-2 h-4 w-4" /> DerpFest Chat
+                  <Users className="mr-2 h-4 w-4" /> Discussion Chat
                 </a>
             </Button>
           </CardContent>
