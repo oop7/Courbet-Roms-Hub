@@ -90,7 +90,7 @@ export default function AboutPage() {
           <CardContent className="flex flex-col gap-4">
             <Button asChild className="w-full" variant="outline">
                <a href="https://t.me/zjdwkdocall2mekdoskwm" target="_blank" rel="noopener noreferrer">
-                  <Send className="mr-2 h-4 w-4" /> Releases Channel
+                  <Send className="mr-2 h-4 w-4" /> ROM Releases Channel
                 </a>
             </Button>
             <Button asChild className="w-full" variant="outline">
