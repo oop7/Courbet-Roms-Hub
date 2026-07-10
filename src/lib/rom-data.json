@@ -7,9 +7,9 @@
       "file_name": "lineage-23.2-20260706-UNOFFICIAL-omer-courbet.zip",
       "rom_type": "LineageOS (Omer)",
       "android_version": "16",
-      "version": "23.2 beta release 4",
+      "version": "23.2 release 4",
       "date": "2026-07-06",
-      "status": "Beta",
+      "status": "Stable",
       "root_method": "None",
       "whats_new": [
         "Dirty flash is OK from previous build.",
