@@ -1,14 +1,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Terminal, Download, AlertTriangle, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { CodeBlock } from '@/components/CodeBlock';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: 'KernelSU Next Root Guide - LineageOS (Omer)',
-    description: 'Learn how to root LineageOS 23.2 (Omer) on Xiaomi Mi 11 Lite 4G (Courbet) by flashing the custom KernelSU Next boot image.',
+  title: 'KernelSU Next Root Guide - LineageOS (Omer)',
+  description: 'Learn how to root LineageOS 23.2 (Omer) on Xiaomi Mi 11 Lite 4G (Courbet) by flashing the custom KernelSU Next boot image.',
 };
 
 export default function LineageOSRootGuidePage() {
@@ -53,30 +52,78 @@ export default function LineageOSRootGuidePage() {
           <CardContent className="space-y-4">
             <p className="text-muted-foreground text-sm">Download all of these files before starting the rooting process:</p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <Button asChild variant="outline" className="w-full h-auto py-4 flex flex-col gap-2">
-                <a href="https://drive.google.com/file/d/14xIt7-a5I5YE4FH0xo2Cf1bxjlPxBtmY/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                  <Download className="h-5 w-5 text-primary" />
-                  <span className="font-semibold">KSU-NEXT boot.img</span>
-                  <span className="text-xs text-muted-foreground">Custom Boot Image</span>
-                </a>
-              </Button>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {/* Card 1 */}
+              <a 
+                href="https://mega.nz/file/TpJ20C4J#qp3sq3dr0lzO85XmxTOEY4X6xHo4E9zc42aSWas6ZoA" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center justify-center text-center p-5 rounded-xl border border-border bg-background/50 hover:bg-secondary/50 hover:border-primary/50 transition-all duration-200 gap-3 min-h-[140px]"
+              >
+                <Download className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-200" />
+                <div className="flex flex-col gap-1 w-full">
+                  <span className="font-semibold text-sm leading-snug text-foreground break-words px-2">
+                    KSU boot.img (2026-07-03 &amp; 2026-07-06)
+                  </span>
+                  <span className="text-xs text-muted-foreground break-words">
+                    LineageOS 23.2 release 3 &amp; 4
+                  </span>
+                </div>
+              </a>
 
-              <Button asChild variant="outline" className="w-full h-auto py-4 flex flex-col gap-2">
-                <a href="https://github.com/KernelSU-Next/KernelSU-Next/releases/download/v3.2.0/KernelSU_Next_v3.2.0-spoofed_33129-release.apk" target="_blank" rel="noopener noreferrer">
-                  <Download className="h-5 w-5 text-primary" />
-                  <span className="font-semibold">KSU Next Manager (Spoofed)</span>
-                  <span className="text-xs text-muted-foreground">Manager APK (Spoofed version)</span>
-                </a>
-              </Button>
+              {/* Card 2 */}
+              <a 
+                href="https://drive.google.com/file/d/14xIt7-a5I5YE4FH0xo2Cf1bxjlPxBtmY/view?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center justify-center text-center p-5 rounded-xl border border-border bg-background/50 hover:bg-secondary/50 hover:border-primary/50 transition-all duration-200 gap-3 min-h-[140px]"
+              >
+                <Download className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-200" />
+                <div className="flex flex-col gap-1 w-full">
+                  <span className="font-semibold text-sm leading-snug text-foreground break-words px-2">
+                    KSU boot.img (2026-06-16)
+                  </span>
+                  <span className="text-xs text-muted-foreground break-words">
+                    LineageOS 23.2 release 2
+                  </span>
+                </div>
+              </a>
 
-              <Button asChild variant="outline" className="w-full h-auto py-4 flex flex-col gap-2">
-                <a href="https://github.com/KernelSU-Next/KernelSU-Next/releases/download/v3.2.0/KernelSU_Next_v3.2.0_33129-release.apk" target="_blank" rel="noopener noreferrer">
-                  <Download className="h-5 w-5 text-primary" />
-                  <span className="font-semibold">KSU Next Manager (Standard)</span>
-                  <span className="text-xs text-muted-foreground">Manager APK (Standard version)</span>
-                </a>
-              </Button>
+              {/* Card 3 */}
+              <a 
+                href="https://github.com/KernelSU-Next/KernelSU-Next/releases/download/v3.2.0/KernelSU_Next_v3.2.0-spoofed_33129-release.apk" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center justify-center text-center p-5 rounded-xl border border-border bg-background/50 hover:bg-secondary/50 hover:border-primary/50 transition-all duration-200 gap-3 min-h-[140px]"
+              >
+                <Download className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-200" />
+                <div className="flex flex-col gap-1 w-full">
+                  <span className="font-semibold text-sm leading-snug text-foreground break-words px-2">
+                    KSU Next Manager (Spoofed)
+                  </span>
+                  <span className="text-xs text-muted-foreground break-words">
+                    Manager APK (Spoofed version)
+                  </span>
+                </div>
+              </a>
+
+              {/* Card 4 */}
+              <a 
+                href="https://github.com/KernelSU-Next/KernelSU-Next/releases/download/v3.2.0/KernelSU_Next_v3.2.0_33129-release.apk" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center justify-center text-center p-5 rounded-xl border border-border bg-background/50 hover:bg-secondary/50 hover:border-primary/50 transition-all duration-200 gap-3 min-h-[140px]"
+              >
+                <Download className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-200" />
+                <div className="flex flex-col gap-1 w-full">
+                  <span className="font-semibold text-sm leading-snug text-foreground break-words px-2">
+                    KSU Next Manager (Standard)
+                  </span>
+                  <span className="text-xs text-muted-foreground break-words">
+                    Manager APK (Standard version)
+                  </span>
+                </div>
+              </a>
             </div>
           </CardContent>
         </Card>

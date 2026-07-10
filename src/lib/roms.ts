@@ -307,7 +307,7 @@ for (const romName in romsByType) {
     }
 
     if (romName === 'LineageOS (Omer)' && androidVersion === '16') {
-      romVersion.note = 'This ROM is vanilla (no GApps) and non-rooted by default. GApps must be flashed immediately after the ROM without rebooting. KernelSU-Next is supported by flashing a custom boot image.';
+      romVersion.note = 'Dirty flash is OK from previous build. This ROM includes GApps and MiuiCamera.';
       romVersion.tips = [
         {
           label: 'Open the LineageOS (Omer) flashing guide',

@@ -4,6 +4,46 @@
 {
   "roms": [
     {
+      "file_name": "lineage-23.2-20260706-UNOFFICIAL-omer-courbet.zip",
+      "rom_type": "LineageOS (Omer)",
+      "android_version": "16",
+      "version": "23.2 beta release 4",
+      "date": "2026-07-06",
+      "status": "Beta",
+      "root_method": "None",
+      "whats_new": [
+        "Dirty flash is OK from previous build.",
+        "GApps and MiuiCamera are included.",
+        "Yet another overlay refinements.",
+        "For detailed rom changelog visit their own groups or site"
+      ],
+      "download_url": "https://drive.google.com/file/d/1uzg8npgTXXBvpFPVRWg-54EEMAhyV7gu/view"
+    },
+    {
+      "file_name": "lineage-23.2-20260703-UNOFFICIAL-omer-courbet.zip",
+      "rom_type": "LineageOS (Omer)",
+      "android_version": "16",
+      "version": "23.2 release 3",
+      "date": "2026-07-03",
+      "status": "Stable",
+      "root_method": "None",
+      "whats_new": [
+        "Clean flash is mandatory.",
+        "GApps and MiuiCamera are included.",
+        "No root access by default; flash ksuboot.img if you want root.",
+        "Use the default recovery inside the zip.",
+        "Build type is switched to user.",
+        "GApps are included.",
+        "300Mhz enabled.",
+        "Cuthole anti-aliasing overlay is improved.",
+        "Switched back to original color modes with some refinements.",
+        "Kernel is rebased with latest LOS source.",
+        "Bugs: AOD is broken.",
+        "For detailed rom changelog visit their own groups or site"
+      ],
+      "download_url": "https://drive.google.com/file/d/1g2LztavPEWl0F9EQO6_CF134BqMoxnjx/view?usp=sharing"
+    },
+    {
       "file_name": "lineage-23.2-20260616-UNOFFICIAL-omer-courbet.zip",
       "rom_type": "LineageOS (Omer)",
       "android_version": "16",
