@@ -54,6 +54,8 @@ const romDescriptions: Record<string, string> = {
   'AxionOS': 'AxionOS focuses on minimalism and stability, delivering a clean AOSP experience with useful additions.',
   'ColorOS-Ace3': 'A ColorOS-based Android 15 port for courbet focused on daily usability and bundled privacy features.',
   'ColorOS 15 Lite': 'A lightweight ColorOS-based port for courbet focused on daily usability and core hardware support.',
+  'CincauOS': 'A CincauOS Android 15 port for courbet - HYPEROS CN 2.0.6.0 ',
+  'HyperOS 3 port': 'A HyperOS 3 Android 15 port for courbet based on Xiaomi.eu with modded theme and launcher tweaks.',
   'DerpFest': 'DerpFest delivers a feature-rich Android experience with performance and customization focused updates.',
   'EvolutionX': 'A flashable custom ROM to bring a true Pixel feel to your Android Device, with many additional configurations at your disposal.',
   'HyperOS 2.0.16.0 CN': 'A HyperOS 2 CN port for courbet with bug fixes and non-rooted stock boot image.',
@@ -75,6 +77,8 @@ const imageHints: Record<string, string> = {
     'axionos': 'abstract purple',
   'coloros-ace3': 'coloros abstract green',
   'coloros-15-lite': 'coloros abstract teal',
+  'CincauOS': 'abstract amber',
+  'hyperos-3-port': 'abstract cyan',
     'derpfest': 'abstract teal purple',
     'evolution-x': 'evolution x logo',
     'infinity-x': 'abstract black',
@@ -94,6 +98,8 @@ const bannerFileNames: Record<string, string> = {
   'AxionOS': 'AXION.webp',
   'ColorOS-Ace3': 'ColorOS_15.webp',
   'ColorOS 15 Lite': 'colorOS_lite.webp',
+  'CincauOS': 'CincauOS.webp',
+  'HyperOS 3 port': 'hyperos_3.webp',
   'DerpFest': 'DerpFest.webp',
   'EvolutionX': 'evolution_x.webp',
   'HyperOS 2.0.16.0 CN': 'HyperOS_2.0.webp',
@@ -154,6 +160,14 @@ const getMaintainerFromAcknowledgements = (romName: string, category: 'rom' | 'p
   }
 
   if (romName === 'OxygenOS-Rev 2' || romName === 'ColorOS-Ace3') {
+    return 'EsTeh';
+  }
+
+  if (romName === 'CincauOS') {
+    return 'EsTeh';
+  }
+
+  if (romName === 'HyperOS 3 port') {
     return 'EsTeh';
   }
 
@@ -235,6 +249,25 @@ for (const romName in romsByType) {
         {
           label: 'Camera app',
           url: 'https://t.me/askastorage/58',
+        },
+      ];
+    }
+
+    if (romName === 'CincauOS' && androidVersion === '15') {
+      romVersion.note = 'If the language is still CN, just reboot.';
+      romVersion.tips = [
+        {
+          label: 'Fix forced close when open Play store',
+          url: 'https://mega.nz/file/H0JzBQJR#2GPRaWrTDQMteo6Tmm_KPMxusdxS6Zi3mMztlMOUJWA',
+        },
+      ];
+    }
+
+    if (romName === 'HyperOS 3 port' && androidVersion === '15') {
+      romVersion.note = 'Base Xiaomi.eu. Do not change the kernel. Disable advanced texture if you feel lags.';
+      romVersion.tips = [
+        {
+          label: 'Do not change the kernel',
         },
       ];
     }

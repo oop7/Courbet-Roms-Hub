@@ -38,6 +38,46 @@
       "download_url": "https://drive.google.com/file/d/1r7nevxUFSTuiUMUNlPlB5NWUj09Mt1m8/view?usp=sharing"
     },
     {
+      "file_name": "CincauOS-courbet-20260512.zip",
+      "rom_type": "CincauOS",
+      "category": "port",
+      "android_version": "15",
+      "version": "2",
+      "date": "2026-05-12",
+      "status": "Beta",
+      "root_method": "None",
+      "whats_new": [
+        "Dvf Notif fix",
+        "If the language is still CN, just reboot.",
+        "For detailed rom changelog visit their own groups or site."
+      ],
+      "download_url": "https://drive.google.com/file/d/15eSH1QTn5b11PC3fSv3qBWg8Rg0X89TT/view"
+    },
+    {
+      "file_name": "HyperOS-3-courbet-20260604.zip",
+      "rom_type": "HyperOS 3 port",
+      "category": "port",
+      "android_version": "15",
+      "version": "3",
+      "date": "2026-06-04",
+      "status": "Beta",
+      "root_method": "None",
+      "whats_new": [
+        "Dsf",
+        "Kaorios",
+        "Fix delay",
+        "Locked vendor",
+        "Flash viperf4x for fix small audio",
+        "Add zram 6gb for better performance",
+        "Disable advanced texture if you feel lags",
+        "Base Xiaomi.eu",
+        "Modded theme",
+        "Modded launcher",
+        "For detailed rom changelog visit their own groups or site."
+      ],
+      "download_url": "https://drive.google.com/file/d/1jE4dEalHWlj7ur9Vcgrar3w2IlVOxX5a/view"
+    },
+    {
       "file_name": "DerpFest-16.2-courbet-20260508.zip",
       "rom_type": "DerpFest",
       "android_version": "16",
