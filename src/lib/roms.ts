@@ -160,15 +160,15 @@ const getMaintainerFromAcknowledgements = (romName: string, category: 'rom' | 'p
   }
 
   if (romName === 'OxygenOS-Rev 2' || romName === 'ColorOS-Ace3') {
-    return 'EsTeh';
+    return 'Aciss';
   }
 
   if (romName === 'CincauOS') {
-    return 'EsTeh';
+    return 'Aciss';
   }
 
   if (romName === 'HyperOS 3 port') {
-    return 'EsTeh';
+    return 'Aciss';
   }
 
   if (category === 'port') {
