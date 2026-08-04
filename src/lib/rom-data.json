@@ -24,7 +24,7 @@
       "android_version": "16",
       "version": "23.2 release 5",
       "date": "2026-07-28",
-      "status": "Beta",
+      "status": "Stable",
       "root_method": "kernel",
       "whats_new": [
         "Reworked on kernel patches for courbet.",
