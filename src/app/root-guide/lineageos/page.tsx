@@ -50,9 +50,27 @@ export default function LineageOSRootGuidePage() {
             <CardTitle className="text-2xl">Required Downloads</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <p className="text-muted-foreground text-sm">Download all of these files before starting the rooting process:</p>
+            <p className="text-muted-foreground text-sm">Download the required files before starting the rooting process:</p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              {/* Card 0 */}
+              <a 
+                href="https://mega.nz/file/bhomzZrY#u2byRI9ntpUt18kdxbEwwzirRxni5wVq6tNOxUkPuXw" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center justify-center text-center p-4 rounded-xl border border-border bg-background/50 hover:bg-secondary/50 hover:border-primary/50 transition-all duration-200 gap-2 min-h-[124px]"
+              >
+                <Download className="h-5 w-5 text-primary group-hover:scale-110 transition-transform duration-200" />
+                <div className="flex flex-col gap-1 w-full">
+                  <span className="font-semibold text-xs leading-snug text-foreground break-words px-2">
+                    KSU boot.img (2026-07-28)
+                  </span>
+                  <span className="text-[11px] leading-tight text-muted-foreground break-words px-2">
+                    LineageOS 23.2 release 5
+                  </span>
+                </div>
+              </a>
+
               {/* Card 1 */}
               <a 
                 href="https://mega.nz/file/TpJ20C4J#qp3sq3dr0lzO85XmxTOEY4X6xHo4E9zc42aSWas6ZoA" 

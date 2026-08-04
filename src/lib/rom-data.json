@@ -4,13 +4,28 @@
 {
   "roms": [
     {
+      "file_name": "Project_Infinity-X-3.12-courbet-15.07.2026-GAPPS-UNOFFICIAL.zip",
+      "rom_type": "Project Infinity X (Aciss)",
+      "android_version": "16",
+      "version": "3.12",
+      "date": "2026-07-15",
+      "status": "Beta",
+      "root_method": "KernelSU Next",
+      "note": "Flash boot.img from example/boot before rooting.",
+      "whats_new": [
+        "init release",
+        "For detailed rom changelog visit their own groups or site"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-aosp/files/16/Project_Infinity-X-3.12-courbet-15.07.2026-GAPPS-UNOFFICIAL.zip/download"
+    },
+    {
       "file_name": "lineage-23.2-20260728-UNOFFICIAL-omer-courbet.zip",
       "rom_type": "LineageOS (Omer)",
       "android_version": "16",
       "version": "23.2 release 5",
       "date": "2026-07-28",
-      "status": "Stable",
-      "root_method": "None",
+      "status": "Beta",
+      "root_method": "kernel",
       "whats_new": [
         "Reworked on kernel patches for courbet.",
         "For detailed rom changelog visit their own groups or site"

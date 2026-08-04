@@ -61,6 +61,7 @@ const romDescriptions: Record<string, string> = {
   'HyperOS 2.0.16.0 CN': 'A HyperOS 2 CN port for courbet with bug fixes and non-rooted stock boot image.',
   'HyperOS 3.0.1.0 EU': 'A debloated HyperOS 3 EU port for courbet with core features and UI experience preserved.',
   'Infinity-X': 'Infinity-X offers a unique blend of features and customizations for a personalized Android experience.',
+  'Project Infinity X (Aciss)': 'Project Infinity X offers a clean and feature-rich Android experience with Aciss maintaining this courbet build.',
   'LineageOS': 'A free and open-source operating system for various devices, based on the Android mobile platform. Successor to CyanogenMod.',
   'LineageOS (Omer)': 'A free and open-source operating system for various devices, based on the Android mobile platform. Successor to CyanogenMod. Unofficial build by omer.',
   'OxygenOS-Rev 2': 'An OxygenOS-based Android 15 port for courbet with prebuilt camera support and bundled utilities.',
@@ -82,6 +83,7 @@ const imageHints: Record<string, string> = {
     'derpfest': 'abstract teal purple',
     'evolution-x': 'evolution x logo',
     'infinity-x': 'abstract black',
+  'project-infinity-x-aciss': 'abstract black',
     'lineageos': 'abstract green',
     'lineageos-omer': 'abstract green',
     'oxygenos-rev-2': 'oxygen abstract red',
@@ -105,6 +107,7 @@ const bannerFileNames: Record<string, string> = {
   'HyperOS 2.0.16.0 CN': 'HyperOS_2.0.webp',
   'HyperOS 3.0.1.0 EU': 'HyperOS_3.0.1.0 EU.webp',
   'Infinity-X': 'ProjectInfinityX.webp',
+  'Project Infinity X (Aciss)': 'InfinityX.webp',
   'LineageOS': 'Lineage.webp',
   'LineageOS (Omer)': 'Lineage.webp',
   'OxygenOS-Rev 2': 'oxygenOS_15.webp',
@@ -168,6 +171,10 @@ const getMaintainerFromAcknowledgements = (romName: string, category: 'rom' | 'p
   }
 
   if (romName === 'HyperOS 3 port') {
+    return 'Aciss';
+  }
+
+  if (romName === 'Project Infinity X (Aciss)') {
     return 'Aciss';
   }
 
@@ -316,6 +323,16 @@ for (const romName in romsByType) {
         {
           label: 'Open the LineageOS (Omer) rooting guide',
           url: '/root-guide/lineageos',
+        },
+      ];
+    }
+
+    if (romName === 'Project Infinity X (Aciss)' && androidVersion === '16') {
+      romVersion.note = 'Flash boot file after the rom file.';
+      romVersion.tips = [
+        {
+          label: 'Download boot file',
+          url: 'https://mega.nz/file/H8pglIgK#EtbGGm-dqFitX7W6E8OA8x2xbv4HBDCh_MLco03n-J8',
         },
       ];
     }
