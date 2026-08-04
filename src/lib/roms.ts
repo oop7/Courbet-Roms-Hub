@@ -194,7 +194,7 @@ for (const romName in romsByType) {
     imageUrl: `/banners/${bannerFileName}`,
     imageHint: imageHints[slug] || 'abstract pattern',
     versions: [],
-    isActive: romName === 'DerpFest' || romName === 'LineageOS (Omer)',
+    isActive: romName === 'LineageOS (Omer)',
   };
 
   // Group by android_version within each rom_type
@@ -307,7 +307,7 @@ for (const romName in romsByType) {
     }
 
     if (romName === 'LineageOS (Omer)' && androidVersion === '16') {
-      romVersion.note = 'Dirty flash is OK from previous build. This ROM includes GApps and MiuiCamera.';
+      romVersion.note = 'Clean flash is recommended.';
       romVersion.tips = [
         {
           label: 'Open the LineageOS (Omer) flashing guide',
