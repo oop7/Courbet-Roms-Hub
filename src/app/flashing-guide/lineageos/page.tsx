@@ -91,34 +91,7 @@ export default function LineageOSFlashingGuidePage() {
             <p>Wait for install to complete.</p>
           </Step>
 
-          <Step num="6" title="Flash GApps (Mandatory)">
-            <Alert variant="destructive" className="bg-destructive/10 border-destructive/30 text-destructive-foreground/80 [&>svg]:text-destructive/80">
-              <AlertTriangle className="h-4 w-4" />
-              <AlertTitle>Do Not Reboot Yet!</AlertTitle>
-              <AlertDescription>
-                This is a vanilla ROM. You must flash GApps immediately after flashing the ROM, without booting into the system first.
-              </AlertDescription>
-            </Alert>
-            <p>Without rebooting the device, select Apply Update → Apply from ADB again in recovery.</p>
-            <p>Download one of the following GApps options to your PC:</p>
-            <ul className="list-disc list-inside space-y-1 mb-3 pl-4">
-              <li>
-                <a href="https://sourceforge.net/projects/nikgapps/files/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">
-                  Option 1: Download NikGApps
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/MindTheGapps/16.0.0-arm64/releases/latest" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">
-                  Option 2: Download MindTheGapps (Latest 16.0.0)
-                </a>
-              </li>
-            </ul>
-            <p>On your PC, sideload the GApps package of your choice:</p>
-            <CodeBlock command="adb sideload MindTheGapps-16.0.0-arm64-XXXXXXXX.zip" />
-            <p>Wait for GApps installation to complete.</p>
-          </Step>
-
-          <Step num="7" title="Reboot">
+          <Step num="6" title="Reboot">
             <p>Reboot to system and let the first boot finish.</p>
           </Step>
         </SectionCard>
