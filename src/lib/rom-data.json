@@ -25,7 +25,7 @@
       "version": "23.2 release 5",
       "date": "2026-07-28",
       "status": "Stable",
-      "root_method": "kernel",
+      "root_method": "None",
       "whats_new": [
         "Reworked on kernel patches for courbet.",
         "For detailed rom changelog visit their own groups or site"
