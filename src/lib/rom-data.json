@@ -4,6 +4,20 @@
 {
   "roms": [
     {
+      "file_name": "lineage-23.2-20260813-UNOFFICIAL-omer-courbet.zip",
+      "rom_type": "LineageOS (Omer)",
+      "android_version": "16",
+      "version": "23.2 release 6",
+      "date": "2026-08-13",
+      "status": "Stable",
+      "root_method": "None",
+      "whats_new": [
+        "August ASB",
+        "For detailed rom changelog visit their own groups or site"
+      ],
+      "download_url": "https://drive.google.com/file/d/1IRjHBSXOJgGKHw6Kd36AtVdn_5BprpP4/view?usp=sharing"
+    },
+    {
       "file_name": "Project_Infinity-X-3.12-courbet-15.07.2026-GAPPS-UNOFFICIAL.zip",
       "rom_type": "Project Infinity X (Aciss)",
       "android_version": "16",
