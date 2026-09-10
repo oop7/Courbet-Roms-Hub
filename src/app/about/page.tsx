@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Cpu, Github, Send, Users } from "lucide-react";
+import { Coffee, Cpu, Github, Heart, Landmark, Send, Users } from "lucide-react";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -101,6 +101,32 @@ export default function AboutPage() {
           </CardContent>
         </Card>
       </div>
+
+      <Card className="bg-secondary/50 max-w-4xl mx-auto mt-8">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-2xl">
+            <Heart className="h-6 w-6 text-accent" />
+            Support the Project
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="grid gap-4 md:grid-cols-3">
+          <Button asChild className="w-full" variant="outline">
+            <a href="https://github.com/sponsors/oop7" target="_blank" rel="noopener noreferrer">
+              <Heart className="mr-2 h-4 w-4" /> GitHub Sponsors
+            </a>
+          </Button>
+          <Button asChild className="w-full" variant="outline">
+            <a href="https://www.buymeacoffee.com/oop7" target="_blank" rel="noopener noreferrer">
+              <Coffee className="mr-2 h-4 w-4" /> Buy Me a Coffee
+            </a>
+          </Button>
+          <Button asChild className="w-full" variant="outline">
+            <a href="mailto:oop7_support@proton.me">
+              <Landmark className="mr-2 h-4 w-4" /> Bank Transfer / SWIFT
+            </a>
+          </Button>
+        </CardContent>
+      </Card>
 
       <div className="text-center mt-16">
         <h2 className="text-2xl font-bold mb-4">Want to contribute?</h2>

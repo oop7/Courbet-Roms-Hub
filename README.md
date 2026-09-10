@@ -71,6 +71,12 @@ If you have a suggestion that would make this better, please fork the repo and c
 4.  Push to the Branch (`git push origin feature/AmazingFeature`)
 5.  Open a Pull Request
 
+## ❤️ Support the Project
+
+- **GitHub Sponsors:** [https://github.com/sponsors/oop7](https://github.com/sponsors/oop7)
+- **Buy Me a Coffee:** [https://www.buymeacoffee.com/oop7](https://www.buymeacoffee.com/oop7)
+- **Direct bank transfer / SWIFT:** Contact me via email at [`oop7_support@proton.me`](mailto:oop7_support@proton.me)
+
 ## ❤️ Acknowledgements
 
 This project would not be possible without the incredible work of the Android modding community. Special thanks to:
