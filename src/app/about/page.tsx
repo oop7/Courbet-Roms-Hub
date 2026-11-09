@@ -47,9 +47,9 @@ export default function AboutPage() {
               This project is a collaboration and wouldn't be possible without the incredible work of:
             </p>
             <ul className="list-disc list-inside space-y-2">
-              <li><a href="https://github.com/meloalfa159" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"><strong>melo159</strong></a>, for tirelessly maintaining all the custom ROMs featured here.</li>
+              <li><a href="https://github.com/meloalfa159" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"><strong>melo159</strong></a>, for maintaining many of the custom ROMs featured here.</li>
               <li><a href="https://t.me/smwnheree" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"><strong>Aska</strong></a>, the maintainer of ports.</li>
-              <li><a href="https://t.me/Aciss21" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"><strong>Aciss</strong></a>, the maintainer of OxygenOS-Rev 2 and ColorOS-Ace3.</li>
+              <li><a href="https://t.me/Aciss21" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"><strong>Aciss</strong></a>, the maintainer of OxygenOS-Rev 2, ColorOS-Ace3, Project Infinity X, and PixelOS builds.</li>
               <li><a href="https://t.me/omer12544" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"><strong>ömer</strong></a>, the maintainer of DerpFest & LineageOS.</li>
               <li>The teams behind KernelSU, KernelSU Next, TWRP, and OrangeFox, Magisk and Apatch.</li>
               <li>PixelOS devs, aryan and other devs for the trees and the kernel</li>

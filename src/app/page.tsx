@@ -9,7 +9,7 @@ export default function Home() {
     {
       icon: <GitBranch className="h-8 w-8 text-primary" />,
       title: "Latest ROMs",
-      description: "Access a curated list of the most popular and stable custom ROMs for your device."
+      description: "Access a curated list of stable and beta custom ROMs for your device."
     },
     {
       icon: <HardDriveDownload className="h-8 w-8 text-primary" />,
@@ -19,7 +19,7 @@ export default function Home() {
     {
       icon: <ShieldCheck className="h-8 w-8 text-primary" />,
       title: "Stable & Secure",
-      description: "We prioritize stable builds and provide information on the latest security patches."
+      description: "Compare release status, security updates, and known ROM information before flashing."
     }
   ];
 

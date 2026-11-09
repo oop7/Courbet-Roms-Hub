@@ -50,6 +50,24 @@ const RomVersionDetails = ({ version }: { version: RomVersion }) => {
             <span className="text-muted-foreground flex items-center"><Calendar className="w-4 h-4 mr-2" /> Last Updated</span>
             <span className="font-medium">{version.lastUpdated}</span>
           </div>
+          {version.flashType && (
+            <div className="flex justify-between items-center">
+              <span className="text-muted-foreground">Flash Type</span>
+              <span className="font-medium">{version.flashType}</span>
+            </div>
+          )}
+          {version.gapps && (
+            <div className="flex justify-between items-center">
+              <span className="text-muted-foreground">GApps</span>
+              <span className="font-medium">{version.gapps}</span>
+            </div>
+          )}
+          {version.lastVerified && (
+            <div className="flex justify-between items-center">
+              <span className="text-muted-foreground">Last Verified</span>
+              <span className="font-medium">{version.lastVerified}</span>
+            </div>
+          )}
         </CardContent>
       </Card>
       
@@ -88,6 +106,15 @@ const RomVersionDetails = ({ version }: { version: RomVersion }) => {
       )}
 
       {!isCrDroid && <MobileDownloadInfo />}
+
+      {version.sourceUrl && (
+        <p className="text-sm text-muted-foreground">
+          Release source:{' '}
+          <Link href={version.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-primary">
+            Open source
+          </Link>
+        </p>
+      )}
 
       <DownloadButton 
         url={version.downloadLink}

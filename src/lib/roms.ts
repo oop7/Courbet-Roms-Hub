@@ -16,6 +16,10 @@ interface RomBuild {
   whats_new: string[];
   note?: string;
   tips?: { label: string; url?: string }[];
+  source_url?: string;
+  last_verified?: string;
+  flash_type?: 'Clean flash' | 'Dirty flash' | 'Not specified';
+  gapps?: 'Included' | 'Required separately' | 'Not specified';
 }
 
 export interface PreviousRelease {
@@ -37,6 +41,10 @@ export interface RomVersion {
   rootMethod: 'KernelSU' | 'KernelSU Next' | 'None' | 'APatch';
   previousReleases?: PreviousRelease[];
   note?: string;
+  sourceUrl?: string;
+  lastVerified?: string;
+  flashType?: 'Clean flash' | 'Dirty flash' | 'Not specified';
+  gapps?: 'Included' | 'Required separately' | 'Not specified';
 }
 
 export interface Rom {
@@ -145,6 +153,10 @@ for (const romName in romsByType) {
       rootMethod: latestBuild.root_method ?? getRootMethod(latestBuild.date),
       note: latestBuild.note,
       tips: latestBuild.tips,
+      sourceUrl: latestBuild.source_url,
+      lastVerified: latestBuild.last_verified,
+      flashType: latestBuild.flash_type,
+      gapps: latestBuild.gapps,
       previousReleases: previousBuilds.map(pr => ({
         version: pr.version,
         date: pr.date === 'Unknown' ? 'N/A' : pr.date,

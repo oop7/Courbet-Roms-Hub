@@ -1,5 +1,5 @@
 import { roms } from '@/lib/roms';
-import { RomCard } from '@/components/RomCard';
+import { RomFilters } from '@/components/RomFilters';
 import type { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic';
@@ -10,9 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function RomsPage() {
-  const customRoms = roms.filter((rom) => rom.category !== 'port');
-  const ports = roms.filter((rom) => rom.category === 'port');
-
   return (
     <div className="container py-12 md:py-16">
       <div className="text-center space-y-4 mb-12">
@@ -24,25 +21,7 @@ export default function RomsPage() {
         </p>
       </div>
 
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold tracking-tight">Custom ROMs</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {customRoms.map((rom) => (
-            <RomCard key={rom.slug} rom={rom} />
-          ))}
-        </div>
-      </section>
-
-      {ports.length > 0 && (
-        <section className="space-y-6 mt-12">
-          <h2 className="text-2xl font-semibold tracking-tight">Ports</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {ports.map((rom) => (
-              <RomCard key={rom.slug} rom={rom} />
-            ))}
-          </div>
-        </section>
-      )}
+      <RomFilters roms={roms} />
     </div>
   );
 }

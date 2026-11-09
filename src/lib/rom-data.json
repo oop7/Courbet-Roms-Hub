@@ -14,10 +14,14 @@
       "whats_new": [
         "Sync with latest source",
         "Leica camera included",
-        "Flickering issues fix maybe",
+        "Possible fix for flickering issues.",
         "For detailed rom changelog visit their own groups or site"
       ],
-      "download_url": "https://sourceforge.net/projects/courbet-aosp/files/Pixel/PixelOS_courbet-17.0-20261103-0015.zip/download"
+      "download_url": "https://sourceforge.net/projects/courbet-aosp/files/Pixel/PixelOS_courbet-17.0-20261103-0015.zip/download",
+      "source_url": "https://sourceforge.net/projects/courbet-aosp/files/Pixel/",
+      "last_verified": "2026-11-09",
+      "flash_type": "Not specified",
+      "gapps": "Not specified"
     },
     {
       "file_name": "lineage-24.0-20261106-UNOFFICIAL-omer-courbet.zip",
@@ -36,6 +40,11 @@
         "For detailed rom changelog visit their own groups or site"
       ],
       "download_url": "https://drive.google.com/file/d/1b9FppsYuU13UjRSQeUDDmIGW0mTWA3X0/view?usp=sharing",
+      "source_url": "https://t.me/zjdwkdocall2mekdoskwm",
+      "last_verified": "2026-11-09",
+      "flash_type": "Clean flash",
+      "gapps": "Included",
+      "note": "Clean flash from LineageOS 23 is mandatory.",
       "tips": [
         {
           "label": "Open the LineageOS (Omer) flashing guide",
@@ -81,7 +90,11 @@
         "Leica camera included",
         "For detailed rom changelog visit their own groups or site"
       ],
-      "download_url": "https://sourceforge.net/projects/courbet-aosp/files/Infinity/Project_Infinity-X-4.1-courbet-02.11.2026-GAPPS-UNOFFICIAL.zip/download"
+      "download_url": "https://sourceforge.net/projects/courbet-aosp/files/Infinity/Project_Infinity-X-4.1-courbet-02.11.2026-GAPPS-UNOFFICIAL.zip/download",
+      "source_url": "https://sourceforge.net/projects/courbet-aosp/files/Infinity/",
+      "last_verified": "2026-11-09",
+      "flash_type": "Not specified",
+      "gapps": "Included"
     },
     {
       "file_name": "Project_Infinity-X-3.12-courbet-15.07.2026-GAPPS-UNOFFICIAL.zip",
