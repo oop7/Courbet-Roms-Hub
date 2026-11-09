@@ -109,7 +109,7 @@ const bannerFileNames: Record<string, string> = {
   'Infinity-X': 'ProjectInfinityX.webp',
   'Project Infinity X (Aciss)': 'InfinityX.webp',
   'LineageOS': 'Lineage.webp',
-  'LineageOS (Omer)': 'LineageOS_Omer.webp',
+  'LineageOS (Omer)': 'Lineage_omer.webp',
   'OxygenOS-Rev 2': 'oxygenOS_15.webp',
   'PixelOS': 'pixelos.webp',
   'RisingOS': 'RisingOS.webp',
