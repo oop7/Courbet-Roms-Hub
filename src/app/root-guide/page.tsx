@@ -37,7 +37,7 @@ export default function RootGuidePage() {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground">
-              Some custom ROMs have KernelSU support built directly into their kernel. Other ROMs may require a patched boot image or a different root method. Check the selected ROM's details before choosing a root solution. For LineageOS (Omer), KernelSU Next is supported by flashing a custom boot image (<code>KSU-NEXT_boot.img</code>) before installing the manager app.
+              Some custom ROMs, such as melo's custom ROMs, have KernelSU support built directly into their kernels. For these ROMs, you only need to install KernelSU Next Manager v1.1.1. Other ROMs may require a patched boot image or a different root method, so check the selected ROM's details before choosing a root solution. For LineageOS (Omer), KernelSU Next is supported by flashing a custom boot image (<code>KSU-NEXT_boot.img</code>) before installing the manager app.
             </p>
           </CardContent>
         </Card>
