@@ -25,8 +25,8 @@ export function RomFilters({ roms }: { roms: Rom[] }) {
         || rom.maintainer.toLowerCase().includes(normalizedQuery);
       const matchesAndroid = androidVersion === 'all'
         || rom.versions.some((version) => version.androidVersion === androidVersion);
-      const matchesStatus = status === 'all'
-        || rom.versions.some((version) => version.status === status);
+      const latestVersion = [...rom.versions].sort((a, b) => Number(b.androidVersion) - Number(a.androidVersion))[0];
+      const matchesStatus = status === 'all' || latestVersion?.status === status;
       const matchesCategory = category === 'all' || rom.category === category;
       const matchesMaintainer = maintainer === 'all' || rom.maintainer === maintainer;
       return matchesQuery && matchesAndroid && matchesStatus && matchesCategory && matchesMaintainer;
