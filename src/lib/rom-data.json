@@ -4,6 +4,22 @@
 {
   "roms": [
     {
+      "file_name": "PixelOS_courbet-17.0-20261103-0015.zip",
+      "rom_type": "PixelOS (Aciss)",
+      "android_version": "17",
+      "version": "17.0",
+      "date": "2026-11-05",
+      "status": "Stable",
+      "root_method": "None",
+      "whats_new": [
+        "Sync with latest source",
+        "Leica camera included",
+        "Flickering issues fix maybe",
+        "For detailed rom changelog visit their own groups or site"
+      ],
+      "download_url": "https://sourceforge.net/projects/courbet-aosp/files/Pixel/PixelOS_courbet-17.0-20261103-0015.zip/download"
+    },
+    {
       "file_name": "lineage-24.0-20261106-UNOFFICIAL-omer-courbet.zip",
       "rom_type": "LineageOS (Omer)",
       "android_version": "17",
