@@ -2,6 +2,8 @@ import { roms } from '@/lib/roms';
 import { RomCard } from '@/components/RomCard';
 import type { Metadata } from 'next';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'ROMs & Ports',
   description: 'Browse custom ROMs and ports available for the Xiaomi Mi 11 Lite 4G (Courbet).',
