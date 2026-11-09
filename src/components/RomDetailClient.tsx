@@ -218,11 +218,6 @@ export function RomDetailClient({ rom }: { rom: Rom }) {
                   Review the release details before flashing.
                 </p>
               </div>
-              <div className="w-full sm:w-56">
-                <DownloadButton url={latestVersion.downloadLink} size="default" className="w-full shadow-glow-primary">
-                  Download latest
-                </DownloadButton>
-              </div>
             </CardContent>
           </Card>
         )}
