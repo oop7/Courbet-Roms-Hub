@@ -42,7 +42,7 @@
       "version": "4.1",
       "date": "2026-11-03",
       "status": "Stable",
-      "root_method": "KernelSU Next",
+      "root_method": "None",
       "whats_new": [
         "Sync with latest source",
         "Leica camera included",
