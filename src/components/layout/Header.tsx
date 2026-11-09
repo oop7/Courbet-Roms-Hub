@@ -9,7 +9,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/s
 import { cn } from '@/lib/utils';
 
 const navItems = [
-  { href: '/roms', label: 'ROMs' },
+  { href: '/roms', label: 'ROMs', featured: true },
   { href: '/root-guide', label: 'Root Guide' },
   { href: '/flashing-guide', label: 'Flashing Guide' },
   { href: '/about', label: 'About' },
@@ -19,7 +19,7 @@ export function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const NavLink = ({ href, label, className, isExternal }: { href: string; label: string; className?: string, isExternal?: boolean }) => {
+  const NavLink = ({ href, label, className, isExternal, featured }: { href: string; label: string; className?: string, isExternal?: boolean; featured?: boolean }) => {
     const isActive = !isExternal && (pathname === href || (href !== '/' && pathname.startsWith(href)));
     return (
       <Link
@@ -27,8 +27,10 @@ export function Header() {
         target={isExternal ? '_blank' : undefined}
         rel={isExternal ? 'noopener noreferrer' : undefined}
         className={cn(
-          'text-sm font-medium transition-colors duration-300 flex items-center gap-1',
+          'text-sm font-medium transition-colors duration-300 flex items-center gap-1 rounded-full px-3 py-1.5',
           isActive ? 'text-primary' : 'text-muted-foreground hover:text-primary',
+          featured && !isActive ? 'hover:bg-primary/10' : '',
+          isActive ? 'bg-primary/10' : '',
           className
         )}
         onClick={() => {

@@ -162,6 +162,7 @@ const RomVersionDetails = ({ version }: { version: RomVersion }) => {
 
 export function RomDetailClient({ rom }: { rom: Rom }) {
   const defaultTab = rom.versions[0]?.androidVersion || '';
+  const latestVersion = rom.versions[0];
   const numVersions = rom.versions.length;
   const maintainerProfileUrl = maintainerTelegramProfiles[rom.maintainer];
 
@@ -202,6 +203,29 @@ export function RomDetailClient({ rom }: { rom: Rom }) {
             data-ai-hint={rom.imageHint}
           />
         </div>
+
+        {latestVersion && (
+          <Card className="border-primary/20 bg-secondary/40 shadow-lg shadow-black/10">
+            <CardContent className="flex flex-col gap-5 p-5 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <p className="text-xs font-medium uppercase tracking-wider text-primary">Latest release</p>
+                <div className="mt-2 flex flex-wrap items-center gap-2">
+                  <Badge variant={latestVersion.status === 'Stable' ? 'default' : 'secondary'}>{latestVersion.status}</Badge>
+                  <Badge variant="outline">Android {latestVersion.androidVersion}</Badge>
+                  <span className="text-sm text-muted-foreground">{latestVersion.lastUpdated}</span>
+                </div>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Review the release details before flashing.
+                </p>
+              </div>
+              <div className="w-full sm:w-56">
+                <DownloadButton url={latestVersion.downloadLink} size="default" className="w-full shadow-glow-primary">
+                  Download latest
+                </DownloadButton>
+              </div>
+            </CardContent>
+          </Card>
+        )}
         
         <Tabs defaultValue={defaultTab} className="w-full">
           <TabsList
