@@ -147,15 +147,6 @@ export function RomDetailClient({ rom }: { rom: Rom }) {
   const numVersions = rom.versions.length;
   const maintainerProfileUrl = maintainerTelegramProfiles[rom.maintainer];
 
-  const gridColsMap: { [key: number]: string } = {
-    1: 'grid-cols-1',
-    2: 'grid-cols-2',
-    3: 'grid-cols-3',
-    4: 'grid-cols-4',
-  };
-
-  const gridColsClass = gridColsMap[numVersions] || 'grid-cols-4';
-
   return (
     <div className="container py-12 md:py-16">
       <div className="max-w-4xl mx-auto space-y-8">
@@ -195,7 +186,10 @@ export function RomDetailClient({ rom }: { rom: Rom }) {
         </div>
         
         <Tabs defaultValue={defaultTab} className="w-full">
-          <TabsList className={`grid w-full ${gridColsClass}`}>
+          <TabsList
+            className="grid w-full"
+            style={{ gridTemplateColumns: `repeat(${numVersions}, minmax(0, 1fr))` }}
+          >
             {rom.versions.map(v => (
               <TabsTrigger key={v.androidVersion} value={v.androidVersion}>{v.androidVersion}</TabsTrigger>
             ))}

@@ -35,7 +35,13 @@
         "Clean flash from LineageOS-23 is mandatory.",
         "For detailed rom changelog visit their own groups or site"
       ],
-      "download_url": "https://drive.google.com/file/d/1b9FppsYuU13UjRSQeUDDmIGW0mTWA3X0/view?usp=sharing"
+      "download_url": "https://drive.google.com/file/d/1b9FppsYuU13UjRSQeUDDmIGW0mTWA3X0/view?usp=sharing",
+      "tips": [
+        {
+          "label": "Open the LineageOS (Omer) flashing guide",
+          "url": "/flashing-guide/lineageos"
+        }
+      ]
     },
     {
       "file_name": "lineage-23.2-20260813-UNOFFICIAL-omer-courbet.zip",
@@ -49,7 +55,18 @@
         "August ASB",
         "For detailed rom changelog visit their own groups or site"
       ],
-      "download_url": "https://drive.google.com/file/d/1IRjHBSXOJgGKHw6Kd36AtVdn_5BprpP4/view?usp=sharing"
+      "download_url": "https://drive.google.com/file/d/1IRjHBSXOJgGKHw6Kd36AtVdn_5BprpP4/view?usp=sharing",
+      "note": "Clean flash is recommended.",
+      "tips": [
+        {
+          "label": "Open the LineageOS (Omer) flashing guide",
+          "url": "/flashing-guide/lineageos"
+        },
+        {
+          "label": "Open the LineageOS (Omer) rooting guide",
+          "url": "/root-guide/lineageos"
+        }
+      ]
     },
     {
       "file_name": "Project_Infinity-X-4.1-courbet-03.11.2026-GAPPS-UNOFFICIAL.zip",
@@ -79,7 +96,13 @@
         "init release",
         "For detailed rom changelog visit their own groups or site"
       ],
-      "download_url": "https://sourceforge.net/projects/courbet-aosp/files/16/Project_Infinity-X-3.12-courbet-15.07.2026-GAPPS-UNOFFICIAL.zip/download"
+      "download_url": "https://sourceforge.net/projects/courbet-aosp/files/16/Project_Infinity-X-3.12-courbet-15.07.2026-GAPPS-UNOFFICIAL.zip/download",
+      "tips": [
+        {
+          "label": "Download boot file",
+          "url": "https://mega.nz/file/H8pglIgK#EtbGGm-dqFitX7W6E8OA8x2xbv4HBDCh_MLco03n-J8"
+        }
+      ]
     },
     {
       "file_name": "lineage-23.2-20260728-UNOFFICIAL-omer-courbet.zip",
@@ -167,7 +190,24 @@
         "Little improvements",
         "For detailed rom changelog visit their own groups or site"
       ],
-      "download_url": "https://drive.google.com/file/d/1r7nevxUFSTuiUMUNlPlB5NWUj09Mt1m8/view?usp=sharing"
+      "download_url": "https://drive.google.com/file/d/1r7nevxUFSTuiUMUNlPlB5NWUj09Mt1m8/view?usp=sharing",
+      "note": "The ROM is not rooted by default. The recovery.img located inside the ROM zip is highly recommended to use as recovery. Read the flashing guide before flashing.",
+      "tips": [
+        {
+          "label": "Open the DerpFest flashing guide",
+          "url": "/flashing-guide/derpfest"
+        },
+        {
+          "label": "You'd better use only natural color mode and disable blur effects."
+        },
+        {
+          "label": "You'd better flash the recovery.img that is located inside of .zip file."
+        },
+        {
+          "label": "APatch & Magisk alpha are available as root solutions for this ROM. Here is the step-by-step guide.",
+          "url": "/root-guide"
+        }
+      ]
     },
     {
       "file_name": "CincauOS-courbet-20260512.zip",
@@ -183,7 +223,14 @@
         "If the language is still CN, just reboot.",
         "For detailed rom changelog visit their own groups or site."
       ],
-      "download_url": "https://drive.google.com/file/d/15eSH1QTn5b11PC3fSv3qBWg8Rg0X89TT/view"
+      "download_url": "https://drive.google.com/file/d/15eSH1QTn5b11PC3fSv3qBWg8Rg0X89TT/view",
+      "note": "If the language is still CN, just reboot.",
+      "tips": [
+        {
+          "label": "Fix forced close when open Play store",
+          "url": "https://mega.nz/file/H0JzBQJR#2GPRaWrTDQMteo6Tmm_KPMxusdxS6Zi3mMztlMOUJWA"
+        }
+      ]
     },
     {
       "file_name": "HyperOS-3-courbet-20260604.zip",
@@ -207,7 +254,13 @@
         "Modded launcher",
         "For detailed rom changelog visit their own groups or site."
       ],
-      "download_url": "https://drive.google.com/file/d/1jE4dEalHWlj7ur9Vcgrar3w2IlVOxX5a/view"
+      "download_url": "https://drive.google.com/file/d/1jE4dEalHWlj7ur9Vcgrar3w2IlVOxX5a/view",
+      "note": "Base Xiaomi.eu. Do not change the kernel. Disable advanced texture if you feel lags.",
+      "tips": [
+        {
+          "label": "Do not change the kernel"
+        }
+      ]
     },
     {
       "file_name": "DerpFest-16.2-courbet-20260508.zip",
@@ -285,7 +338,17 @@
         "What's working: NFC, vibration, Bluetooth, fingerprint, AOD, and other features.",
         "Known bugs: D2TW (works for a second if AOD is enabled), face unlock."
       ],
-      "download_url": "https://drive.google.com/file/d/1_XpM-eSUz8uxAI5TJljYF3gHgMin98K7/view?usp=drive_link"
+      "download_url": "https://drive.google.com/file/d/1_XpM-eSUz8uxAI5TJljYF3gHgMin98K7/view?usp=drive_link",
+      "tips": [
+        {
+          "label": "If you want a blurred Control Center, use Lucky Tool",
+          "url": "https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool"
+        },
+        {
+          "label": "Camera app",
+          "url": "https://t.me/askastorage/58"
+        }
+      ]
     },
     {
       "file_name": "HyperOS_3.0.1.0_EU_courbet_20260314.zip",
@@ -300,7 +363,18 @@
         "Bugs: Sometimes pressing the power button has around a one-second delay, and AOD auto brightness is not working (AOD brightness stays around middle to dim).",
         "Includes Harman Kardon."
       ],
-      "download_url": "https://drive.google.com/file/d/1jZXkotohO074RlNfPDM7e10ervvX47yP/view?usp=drivesdk"
+      "download_url": "https://drive.google.com/file/d/1jZXkotohO074RlNfPDM7e10ervvX47yP/view?usp=drivesdk",
+      "tips": [
+        {
+          "label": "The ROM may take time to settle, so some lag is expected on first boot"
+        },
+        {
+          "label": "For better performance, do not enable advanced texture in settings"
+        },
+        {
+          "label": "This ROM is a debloated version of Marble HyperOS 3 EU"
+        }
+      ]
     },
     {
       "file_name": "HyperOS_2.0.16.0_CN_courbet_20260217.zip",
@@ -363,7 +437,8 @@
         "Play Store certified by default.",
         "For detailed ROM changelog, visit their own groups or site."
       ],
-      "download_url": "https://drive.google.com/file/d/1bLsUtBegjgdBTAM6gB9bMAufu-grKGbR/view"
+      "download_url": "https://drive.google.com/file/d/1bLsUtBegjgdBTAM6gB9bMAufu-grKGbR/view",
+      "note": "LET THE ROM SETTLE. Since this is Oplus-based, it usually takes around 1 to 3 days for the experience to fully stabilize."
     },
     {
       "file_name": "lineage-23.1-20260110-UNOFFICIAL-courbet.zip",

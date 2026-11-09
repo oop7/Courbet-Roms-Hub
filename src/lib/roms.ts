@@ -1,6 +1,7 @@
 
 
 import romData from './rom-data.json';
+import { romMetadata } from './rom-metadata';
 
 interface RomBuild {
   file_name: string;
@@ -13,6 +14,8 @@ interface RomBuild {
   category?: 'rom' | 'port';
   root_method?: 'KernelSU' | 'KernelSU Next' | 'None' | 'APatch';
   whats_new: string[];
+  note?: string;
+  tips?: { label: string; url?: string }[];
 }
 
 export interface PreviousRelease {
@@ -37,6 +40,7 @@ export interface RomVersion {
 }
 
 export interface Rom {
+  id: string;
   slug: string;
   category: 'rom' | 'port';
   name: string;
@@ -48,79 +52,6 @@ export interface Rom {
   isActive?: boolean;
 }
 
-
-const romDescriptions: Record<string, string> = {
-  'AlphaDroid': 'A lightweight and performance-focused ROM, aiming to provide a smooth experience with essential customizations.',
-  'AxionOS': 'AxionOS focuses on minimalism and stability, delivering a clean AOSP experience with useful additions.',
-  'ColorOS-Ace3': 'A ColorOS-based Android 15 port for courbet focused on daily usability and bundled privacy features.',
-  'ColorOS 15 Lite': 'A lightweight ColorOS-based port for courbet focused on daily usability and core hardware support.',
-  'CincauOS': 'A CincauOS Android 15 port for courbet - HYPEROS CN 2.0.6.0 ',
-  'HyperOS 3 port': 'A HyperOS 3 Android 15 port for courbet based on Xiaomi.eu with modded theme and launcher tweaks.',
-  'DerpFest': 'DerpFest delivers a feature-rich Android experience with performance and customization focused updates.',
-  'EvolutionX': 'A flashable custom ROM to bring a true Pixel feel to your Android Device, with many additional configurations at your disposal.',
-  'HyperOS 2.0.16.0 CN': 'A HyperOS 2 CN port for courbet with bug fixes and non-rooted stock boot image.',
-  'HyperOS 3.0.1.0 EU': 'A debloated HyperOS 3 EU port for courbet with core features and UI experience preserved.',
-  'Infinity-X': 'Infinity-X offers a unique blend of features and customizations for a personalized Android experience.',
-  'Project Infinity X (Aciss)': 'Project Infinity X offers a clean and feature-rich Android experience with Aciss maintaining this courbet build.',
-  'LineageOS': 'A free and open-source operating system for various devices, based on the Android mobile platform. Successor to CyanogenMod.',
-  'LineageOS (Omer)': 'A free and open-source operating system for various devices, based on the Android mobile platform. Successor to CyanogenMod. Unofficial build by omer.',
-  'OxygenOS-Rev 2': 'An OxygenOS-based Android 15 port for courbet with prebuilt camera support and bundled utilities.',
-  'PixelOS': 'Get the pure Pixel experience on your Courbet device. Smooth, stable, and packed with Google\'s best features.',
-  'PixelOS (Aciss)': 'Get the pure Pixel experience on your Courbet device with Aciss maintaining this build.',
-  'RisingOS': 'RisingOS is known for its extensive feature set and customization options, allowing you to tailor your device to your liking.',
-  'The Pixel Project': 'Aims to replicate the Google Pixel software experience as closely as possible on other devices.',
-  'VoltageOS': 'VoltageOS is a clean and simple ROM that focuses on providing a stable and reliable Android experience.',
-  'crDroid': 'crDroid is designed to increase performance and reliability over stock Android for your device, also attempting to bring many of the best features existent today.',
-  'RisingOS Revived': 'RisingOS Revived continues the legacy of RisingOS with a focus on stability and a refined user experience.',
-};
-
-const imageHints: Record<string, string> = {
-    'alphadroid': 'abstract orange',
-    'axionos': 'abstract purple',
-  'coloros-ace3': 'coloros abstract green',
-  'coloros-15-lite': 'coloros abstract teal',
-  'CincauOS': 'abstract amber',
-  'hyperos-3-port': 'abstract cyan',
-    'derpfest': 'abstract teal purple',
-    'evolution-x': 'evolution x logo',
-    'infinity-x': 'abstract black',
-  'project-infinity-x-aciss': 'abstract black',
-    'lineageos': 'abstract green',
-    'lineageos-omer': 'abstract green',
-    'oxygenos-rev-2': 'oxygen abstract red',
-    'pixelos': 'abstract dark blue',
-    'pixelos-aciss': 'abstract dark blue',
-    'risingos': 'abstract red',
-    'risingos-revived': 'abstract red',
-    'the-pixel-project': 'abstract yellow',
-    'voltageos': 'abstract indigo',
-    'crdroid': 'abstract orange geometric',
-}
-
-const bannerFileNames: Record<string, string> = {
-  'AlphaDroid': 'alpha.webp',
-  'AxionOS': 'AXION.webp',
-  'ColorOS-Ace3': 'ColorOS_15.webp',
-  'ColorOS 15 Lite': 'colorOS_lite.webp',
-  'CincauOS': 'CincauOS.webp',
-  'HyperOS 3 port': 'hyperos_3.webp',
-  'DerpFest': 'DerpFest.webp',
-  'EvolutionX': 'evolution_x.webp',
-  'HyperOS 2.0.16.0 CN': 'HyperOS_2.0.webp',
-  'HyperOS 3.0.1.0 EU': 'HyperOS_3.0.1.0 EU.webp',
-  'Infinity-X': 'ProjectInfinityX.webp',
-  'Project Infinity X (Aciss)': 'InfinityX.webp',
-  'LineageOS': 'Lineage.webp',
-  'LineageOS (Omer)': 'Lineage_omer.webp',
-  'OxygenOS-Rev 2': 'oxygenOS_15.webp',
-  'PixelOS': 'pixelos.webp',
-  'PixelOS (Aciss)': 'pixelos_Aciss.webp',
-  'RisingOS': 'RisingOS.webp',
-  'RisingOS Revived': 'RisingOS_Revived.webp',
-  'The Pixel Project': 'ThePixelProject.webp',
-  'VoltageOS': 'voltage.webp',
-  'crDroid': 'CrDroid.webp',
-};
 
 const processedRoms: Record<string, Rom> = {};
 
@@ -160,51 +91,23 @@ const getRootMethod = (buildDate: string): 'KernelSU' | 'KernelSU Next' => {
   return new Date(buildDate) < cutoffDate ? 'KernelSU' : 'KernelSU Next';
 };
 
-const getMaintainerFromAcknowledgements = (romName: string, category: 'rom' | 'port'): string => {
-  if (romName === 'DerpFest' || romName === 'LineageOS (Omer)') {
-    return 'omer';
-  }
-
-  if (romName === 'OxygenOS-Rev 2' || romName === 'ColorOS-Ace3') {
-    return 'Aciss';
-  }
-
-  if (romName === 'CincauOS') {
-    return 'Aciss';
-  }
-
-  if (romName === 'HyperOS 3 port') {
-    return 'Aciss';
-  }
-
-  if (romName === 'Project Infinity X (Aciss)') {
-    return 'Aciss';
-  }
-
-  if (category === 'port') {
-    return 'Aska';
-  }
-
-  return 'melo159';
-};
-
-
 for (const romName in romsByType) {
   const allBuilds = romsByType[romName];
-  const slug = romName.toLowerCase().replace(/\s/g, '-').replace(/[().]/g, '');
-  const bannerFileName = bannerFileNames[romName] || 'placeholder.png';
+  const metadata = romMetadata[romName];
+  const slug = metadata?.id || romName.toLowerCase().replace(/\s/g, '-').replace(/[().]/g, '');
   const category: 'rom' | 'port' = allBuilds.some(build => build.category === 'port') ? 'port' : 'rom';
   
   const rom: Rom = {
+    id: slug,
     slug: slug,
     category: category,
     name: romName,
-    description: romDescriptions[romName] || `A great custom ROM for your device.`,
-    maintainer: getMaintainerFromAcknowledgements(romName, category),
-    imageUrl: `/banners/${bannerFileName}`,
-    imageHint: imageHints[slug] || 'abstract pattern',
+    description: metadata?.description || `A great custom ROM for your device.`,
+    maintainer: metadata?.maintainer || (category === 'port' ? 'Aska' : 'melo159'),
+    imageUrl: `/banners/${metadata?.banner || 'placeholder.png'}`,
+    imageHint: metadata?.imageHint || 'abstract pattern',
     versions: [],
-    isActive: romName === 'LineageOS (Omer)',
+    isActive: metadata?.isActive,
   };
 
   // Group by android_version within each rom_type
@@ -240,6 +143,8 @@ for (const romName in romsByType) {
       whatsNew: latestBuild.whats_new,
       lastUpdated: latestBuild.date === 'Unknown' ? 'N/A' : latestBuild.date,
       rootMethod: latestBuild.root_method ?? getRootMethod(latestBuild.date),
+      note: latestBuild.note,
+      tips: latestBuild.tips,
       previousReleases: previousBuilds.map(pr => ({
         version: pr.version,
         date: pr.date === 'Unknown' ? 'N/A' : pr.date,
@@ -250,114 +155,6 @@ for (const romName in romsByType) {
       })),
     };
 
-    if (romName === 'ColorOS 15 Lite' && androidVersion === '15') {
-      romVersion.tips = [
-        {
-          label: 'If you want a blurred Control Center, use Lucky Tool',
-          url: 'https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool',
-        },
-        {
-          label: 'Camera app',
-          url: 'https://t.me/askastorage/58',
-        },
-      ];
-    }
-
-    if (romName === 'CincauOS' && androidVersion === '15') {
-      romVersion.note = 'If the language is still CN, just reboot.';
-      romVersion.tips = [
-        {
-          label: 'Fix forced close when open Play store',
-          url: 'https://mega.nz/file/H0JzBQJR#2GPRaWrTDQMteo6Tmm_KPMxusdxS6Zi3mMztlMOUJWA',
-        },
-      ];
-    }
-
-    if (romName === 'HyperOS 3 port' && androidVersion === '15') {
-      romVersion.note = 'Base Xiaomi.eu. Do not change the kernel. Disable advanced texture if you feel lags.';
-      romVersion.tips = [
-        {
-          label: 'Do not change the kernel',
-        },
-      ];
-    }
-
-    if (romName === 'HyperOS 3.0.1.0 EU' && androidVersion === '15') {
-      romVersion.tips = [
-        {
-          label: 'The ROM may take time to settle, so some lag is expected on first boot',
-        },
-        {
-          label: 'For better performance, do not enable advanced texture in settings',
-        },
-        {
-          label: 'This ROM is a debloated version of Marble HyperOS 3 EU',
-        },
-      ];
-    }
-
-    if (romName === 'DerpFest' && androidVersion === '16') {
-      romVersion.note = 'The ROM is not rooted by default. The recovery.img located inside the ROM zip is highly recommended to use as recovery. Read the flashing guide before flashing.';
-      romVersion.tips = [
-        {
-          label: 'Open the DerpFest flashing guide',
-          url: '/flashing-guide/derpfest',
-        },
-        {
-          label: "You'd better use only natural color mode and disable blur effects."
-        },
-        {
-          label: "You'd better flash the recovery.img that is located inside of .zip file."
-        },
-        {
-          label: 'APatch & Magisk alpha are available as root solutions for this ROM. Here is the step-by-step guide.',
-          url: '/root-guide',
-        },
-      ];
-    }
-
-    if (romName === 'LineageOS (Omer)' && androidVersion === '16') {
-      romVersion.note = 'Clean flash is recommended.';
-      romVersion.tips = [
-        {
-          label: 'Open the LineageOS (Omer) flashing guide',
-          url: '/flashing-guide/lineageos',
-        },
-        {
-          label: 'Open the LineageOS (Omer) rooting guide',
-          url: '/root-guide/lineageos',
-        },
-      ];
-    }
-
-    if (romName === 'LineageOS (Omer)' && androidVersion === '17') {
-      romVersion.tips = [
-        {
-          label: 'Open the LineageOS (Omer) flashing guide',
-          url: '/flashing-guide/lineageos',
-        },
-      ];
-    }
-
-    if (romName === 'Project Infinity X (Aciss)' && androidVersion === '16') {
-      romVersion.note = 'Flash boot file after the rom file.';
-      romVersion.tips = [
-        {
-          label: 'Download boot file',
-          url: 'https://mega.nz/file/H8pglIgK#EtbGGm-dqFitX7W6E8OA8x2xbv4HBDCh_MLco03n-J8',
-        },
-      ];
-    }
-
-    if (romName === 'ColorOS-Ace3' && androidVersion === '15') {
-      romVersion.note = 'LET THE ROM SETTLE. Since this is Oplus-based, it usually takes around 1 to 3 days for the experience to fully stabilize.';
-    }
-    
-    // Add note for crDroid
-    if (romName === 'crDroid') {
-      romVersion.note = "We don't provide a direct download link for crDroid to support them. Please visit their website.";
-    }
-
     rom.versions.push(romVersion);
   }
 
@@ -367,15 +164,16 @@ for (const romName in romsByType) {
 }
 
 // Manually add/update crDroid
-const crDroidSlug = 'crdroid';
+const crDroidSlug = romMetadata.crDroid.id;
 processedRoms[crDroidSlug] = {
+    id: crDroidSlug,
     slug: crDroidSlug,
   category: 'rom',
     name: 'crDroid',
-    description: romDescriptions['crDroid'],
+    description: romMetadata.crDroid.description,
     maintainer: 'melo159',
-    imageUrl: `/banners/${bannerFileNames['crDroid']}`,
-    imageHint: imageHints[crDroidSlug],
+    imageUrl: `/banners/${romMetadata.crDroid.banner}`,
+    imageHint: romMetadata.crDroid.imageHint,
     versions: [
         {
             androidVersion: '16',

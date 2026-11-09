@@ -9,7 +9,7 @@ import { ArrowRight, Calendar, Code, ShieldCheck, Activity } from 'lucide-react'
 
 export function RomCard({ rom }: { rom: Rom }) {
   // Get the latest version to display on the card
-  const latestVersion = rom.versions.sort((a, b) => parseInt(b.androidVersion) - parseInt(a.androidVersion))[0];
+  const latestVersion = [...rom.versions].sort((a, b) => parseInt(b.androidVersion) - parseInt(a.androidVersion))[0];
 
   return (
     <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:border-primary/80 border-border bg-card hover:shadow-glow-primary">

@@ -27,7 +27,7 @@ This project is built with a modern, performant, and developer-friendly tech sta
 - **Language:** [TypeScript](https://www.typescriptlang.org/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **UI Components:** [shadcn/ui](https://ui.shadcn.com/)
-- **Deployment:** [Firebase App Hosting](https://firebase.google.com/docs/app-hosting)
+- **Deployment:** [Vercel](https://vercel.com/)
 
 ## 🛠️ Getting Started
 
