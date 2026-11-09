@@ -107,15 +107,6 @@ const RomVersionDetails = ({ version }: { version: RomVersion }) => {
 
       {!isCrDroid && <MobileDownloadInfo />}
 
-      {version.sourceUrl && (
-        <p className="text-sm text-muted-foreground">
-          Release source:{' '}
-          <Link href={version.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-primary">
-            Open source
-          </Link>
-        </p>
-      )}
-
       <DownloadButton 
         url={version.downloadLink}
         variant='default'
