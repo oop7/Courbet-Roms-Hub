@@ -41,3 +41,6 @@ firestore-debug.log
 *.tsbuildinfo
 *.log
 *.py
+
+.vercel
+.env*
