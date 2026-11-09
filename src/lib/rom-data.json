@@ -4,6 +4,24 @@
 {
   "roms": [
     {
+      "file_name": "lineage-24.0-20261106-UNOFFICIAL-omer-courbet.zip",
+      "rom_type": "LineageOS (Omer)",
+      "android_version": "17",
+      "version": "24.0",
+      "date": "2026-11-06",
+      "status": "Stable",
+      "root_method": "None",
+      "whats_new": [
+        "November ASB.",
+        "Userdebug type of build.",
+        "MIUI camera is included.",
+        "GApps are included.",
+        "Clean flash from LineageOS-23 is mandatory.",
+        "For detailed rom changelog visit their own groups or site"
+      ],
+      "download_url": "https://drive.google.com/file/d/1b9FppsYuU13UjRSQeUDDmIGW0mTWA3X0/view?usp=sharing"
+    },
+    {
       "file_name": "lineage-23.2-20260813-UNOFFICIAL-omer-courbet.zip",
       "rom_type": "LineageOS (Omer)",
       "android_version": "16",
