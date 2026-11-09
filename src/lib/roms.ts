@@ -327,6 +327,15 @@ for (const romName in romsByType) {
       ];
     }
 
+    if (romName === 'LineageOS (Omer)' && androidVersion === '17') {
+      romVersion.tips = [
+        {
+          label: 'Open the LineageOS (Omer) flashing guide',
+          url: '/flashing-guide/lineageos',
+        },
+      ];
+    }
+
     if (romName === 'Project Infinity X (Aciss)' && androidVersion === '16') {
       romVersion.note = 'Flash boot file after the rom file.';
       romVersion.tips = [
