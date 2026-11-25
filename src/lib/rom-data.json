@@ -4,6 +4,19 @@
 {
   "roms": [
     {
+      "file_name": "lineage-24.0-20261124-UNOFFICIAL-omer-courbet.zip",
+      "rom_type": "LineageOS (Omer)",
+      "android_version": "17",
+      "version": "24.0",
+      "date": "2026-11-24",
+      "status": "Stable",
+      "root_method": "None",
+      "whats_new": [
+        "Synced with latest LOS source."
+      ],
+      "download_url": "https://drive.google.com/file/d/1VSDQR03nstVQ_PPSKcFkw_yoOjux77Kz/view?usp=sharing"
+    },
+    {
       "file_name": "PixelOS_courbet-17.0-20261103-0015.zip",
       "rom_type": "PixelOS (Aciss)",
       "android_version": "17",
